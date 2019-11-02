@@ -1,0 +1,1 @@
+1. Oryginalny plik .csv ma błędy odnośnie "Mega ewolucji", a także brakuje mu kilku pokemonów
