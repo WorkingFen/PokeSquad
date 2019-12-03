@@ -4,7 +4,7 @@ from enum import IntEnum
 class Pokemon(object):
 
     def __init__(self, number, variant, name, hp, attack, defence, sp_attack, sp_defence,
-                 speed, damage_multi: dict, classification, type1, type2, frequency):
+                 speed, damage_multi: dict, classification, type1, type2, occurrence, moves: list):
         self.number = number
         self.variant = variant
         self.name = name
@@ -18,7 +18,8 @@ class Pokemon(object):
         self.classification = classification
         self.type1 = type1
         self.type2 = type2
-        self.frequency = frequency
+        self.occurrence = occurrence
+        self.moves = moves
 
     def taken_hit(self, other):
         return self.damage_multi.get(other.type1, 1.0) * self.damage_multi.get(other.type2, 1.0)
