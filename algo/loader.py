@@ -1,15 +1,15 @@
 from model import Pokemon
-from model import PokemonType
+from model import Type
 
 
 def load_pokemons():
     pokemon_list = []
-    lines = open('data/Pokemon.csv').readlines()
+    lines = open('data/pokemon.csv').readlines()
     for line in lines[1:]:
         l = line.split(';')
         damage = {}
         variant = l[1] if len(l[1]) > 0 else None
-        for t in PokemonType:
+        for t in Type:
             damage[t] = l[int(t) + 10]
         moves = l[37][1:][:-2].replace('\'', '').split(',')
         moves = [m.upper() for m in moves]

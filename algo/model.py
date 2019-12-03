@@ -25,7 +25,13 @@ class Pokemon(object):
         return self.damage_multi.get(other.type1, 1.0) * self.damage_multi.get(other.type2, 1.0)
 
 
-class PokemonType(IntEnum):
+class Move(object):
+
+    def __init__(self, type):
+        self.type = type
+
+
+class Type(IntEnum):
     NORMAL = 0
     FIRE = 1
     WATER = 2
@@ -44,3 +50,16 @@ class PokemonType(IntEnum):
     DARK = 15
     STEEL = 16
     FAIRY = 17
+
+
+class WeatherCondition(IntEnum):
+    CLEAR = 0
+    SUN = 1
+    EXTREME_SUN = 2
+    RAIN = 3
+    HEAVY_RAIN = 4
+    SANDSTORM = 5
+    HAIL = 6
+    SHADOWY_AURA = 7
+    FOG = 8
+    WIND = 9
