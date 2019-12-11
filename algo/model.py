@@ -1,7 +1,7 @@
 from enum import IntEnum
 from random import choices
-
 from aenum import Enum, NoAlias
+import copy
 
 
 class Pokemon(object):
@@ -24,12 +24,13 @@ class Pokemon(object):
         self.moves = choices(moves, k=Pokemon.moves_count)
 
     def mutant(self, pokemons):
+        mutant = copy.copy(self)
         mutations = choices([0, 1, 2, 3, 4, 5], [0.05, 0.45, 0.35, 0.1, 0.04, 0.01], k=1)[0]
         if mutations == 5:
             return choices(pokemons, [p.occurrence for p in pokemons], k=1)[0]
         left = Pokemon.moves_count-mutations
-        self.moves = choices(self.moves, k=left) + (choices(self.__available_moves__, k=mutations))
-        return self
+        mutant.moves = choices(self.moves, k=left) + (choices(self.__available_moves__, k=mutations))
+        return mutant
 
 
 class Move(object):
