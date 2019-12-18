@@ -9,16 +9,16 @@ class Pokemon(object):
     moves_count = 4
 
     def __init__(self, variant, name, hp, attack, defence, sp_attack, sp_defence,
-                 speed, damage_multi: dict, occurrence, moves: list):
+                 speed, damage_multi: dict, occurrence: float, moves: list):
         self.__available_moves__ = moves
         self.variant = variant
         self.name = name
-        self.hp = hp
-        self.attack = attack
-        self.defence = defence
-        self.sp_attack = sp_attack
-        self.sp_defence = sp_defence
-        self.speed = speed
+        self.hp = int(hp)
+        self.attack = int(attack)
+        self.defence = int(defence)
+        self.sp_attack = int(sp_attack)
+        self.sp_defence = int(sp_defence)
+        self.speed = int(speed)
         self.damage_multi = damage_multi
         self.occurrence = occurrence
         self.moves = choices(moves, k=Pokemon.moves_count)
