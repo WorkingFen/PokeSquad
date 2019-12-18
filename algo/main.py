@@ -41,7 +41,8 @@ def selection(population: list, limit: int):
     for team in ranked_population[:limit]:
         if random.random() < prob:
             selected.append(team)
-    return selected
+    # what should it return?
+    return ranked_population[:limit]
 
 
 def crossover(selected: list, prob: float):

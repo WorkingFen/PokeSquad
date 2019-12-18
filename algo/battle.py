@@ -12,7 +12,8 @@ def pokemon_battle(pokemon1: Pokemon, pokemon2: Pokemon):
 
 def team_battle(team1: list, team2: list):
     # TODO implement
-    return random.choices([team1, team2], k=1)[0]
+    # return random.choices([team1, team2], k=1)[0]
+    return team1 if sum([x.attack + x.defence for x in team1]) > sum([x.attack + x.defence for x in team2]) else team2
 
 
 def tournament(teams: list):
@@ -27,5 +28,5 @@ def tournament(teams: list):
             else:
                 scores[opponent_team] = scores.get(opponent_team, 0) + 1
     sorted_teams = sorted(scores.items(), key=lambda p: -p[1])
-    print(f'best team score: {sorted_teams[0][1]}')
+    print(f'best team attack + defense: {sum([x.attack + x.defence for x in sorted_teams[0][0]])}')
     return [x[0] for x in sorted_teams]
