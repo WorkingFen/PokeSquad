@@ -25,7 +25,7 @@ def evolve():
         selected = selection(population, selection_limit)
         offspring = crossover(selected, crossover_probability)
         offspring = mutate(offspring, mutation_probability)
-        population = next_population(selected, offspring, elite_limit, population_size, all_pokemons)
+        population = next_population(selected, offspring, elite_limit, population_size)
 
 
 def reproduce(population: list, pokemons: list, size: int):
@@ -76,6 +76,6 @@ def mutate(offspring: list, prob: float):
     return mutants
 
 
-def next_population(best_fits: list, offspring: list, elite: int, size: int, pokemons: list):
+def next_population(best_fits: list, offspring: list, elite: int, size: int):
     successors = (best_fits[:elite] + offspring)[:size]
     return successors[:size]
