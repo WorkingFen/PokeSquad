@@ -1,61 +1,73 @@
 import random
-
+import utils
+from collections import defaultdict
 from battle import tournament
 from loader import load_pokemons
 
+# constants
 team_size = 6
 all_pokemons = load_pokemons()
 
+# parameters
+selection_acceptance = 0.2  # [0.0 - 1.0]
+elite_acceptance = 0.5
+population_size = 400
+crossover_probability = 0.5
+mutation_probability = 0.3
+
 
 def evolve():
-    crossover_prob = 0.5
-    mutation_prob = 0.3
-    population_size = 400
-    parents_limit = int(400 * 0.6)
-    elite_size = int(400 * 0.4)
-    offspring_size = population_size - parents_limit
-    population = initial_population(all_pokemons, population_size)
-    while True:
-        best_fits = selection(population, parents_limit)
-        offspring = crossover(best_fits, offspring_size, crossover_prob)
-        offspring = mutate(offspring, mutation_prob)
-        population = pick_next_population(best_fits, offspring, elite_size)
-
-
-def initial_population(pokemons: list, size: int):
+    selection_limit = int(population_size * selection_acceptance)
+    elite_limit = int(population_size * elite_acceptance)
     population = []
-    for i in range(size):
+    while True:
+        population = reproduce(population, all_pokemons, population_size)
+        selected = selection(population, selection_limit)
+        offspring = crossover(selected, crossover_probability)
+        offspring = mutate(offspring, mutation_probability)
+        population = next_population(selected, offspring, elite_limit, population_size, all_pokemons)
+
+
+def reproduce(population: list, pokemons: list, size: int):
+    while len(population) < size:
         population.append(frozenset(random.choices(pokemons, k=team_size)))
     return population
 
 
 def selection(population: list, limit: int):
+    selected = []
+    prob = 1 / limit
     ranked_population = tournament(population)
-    return ranked_population[:limit]
+    for team in ranked_population[:limit]:
+        if random.random() < prob:
+            selected.append(team)
+    return selected
 
 
-def crossover(best_fits: list, offspring_size: int, crossover_prob: float):
+def crossover(selected: list, prob: float):
     offspring = []
-    while len(offspring) < offspring_size:
-        couple = random.choices(best_fits, k=2)
-        if random.random() < crossover_prob:
-            child = set()
-            all_pokemons = [poke for parent in couple for poke in parent]
-            while len(child) < team_size:
-                for poke in all_pokemons:
-                    if poke not in child and random.random() < 0.5:
-                        child.add(poke)
-            offspring.append(frozenset(child))
+    couples = utils.list2pairs(selected)
+    for couple in couples:
+        if random.random() >= prob:
+            offspring.append(couple[0])
+            offspring.append(couple[1])
+            continue
+        child = set()
+        pokemons = list(couple[0]) + list(couple[1])
+        while len(child) < team_size:
+            for poke in pokemons:
+                if poke not in child and random.random() < 0.5:
+                    child.add(poke)
+        offspring.append(frozenset(child))
     return offspring
 
 
-def mutate(offspring: list, probability: float):
-    assert 0 <= probability <= 1
+def mutate(offspring: list, prob: float):
     mutants = []
     for team in offspring:
         mutated_team = []
         for pokemon in team:
-            if random.uniform(0, 1) < probability:
+            if random.random() < prob:
                 mutated_team.append(pokemon.mutant(all_pokemons))
             else:
                 mutated_team.append(pokemon)
@@ -63,8 +75,6 @@ def mutate(offspring: list, probability: float):
     return mutants
 
 
-def pick_next_population(best_fits: list, offspring: list, elite_size: int):
-    return best_fits[:elite_size] + offspring
-
-
-evolve()
+def next_population(best_fits: list, offspring: list, elite: int, size: int, pokemons: list):
+    successors = (best_fits[:elite] + offspring)[:size]
+    return successors[:size]
