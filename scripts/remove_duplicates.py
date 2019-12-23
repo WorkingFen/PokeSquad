@@ -16,8 +16,8 @@ def write_list(file, lst):
 
 
 def remove_from_file():
-    file = open("moves.json", "r", encoding="utf-8")
-    save = open("non-duplicate_moves.json", "a+", encoding="utf-8")
+    file = open("../data/abilities.json", "r", encoding="utf-8")
+    save = open("../data/non-duplicate_abilities.json", "a+", encoding="utf-8")
     for line in file:
         new_line = remove_duplicates(line)
         write_list(save, new_line)
