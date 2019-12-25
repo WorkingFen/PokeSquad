@@ -1,3 +1,3 @@
 To use scrapy write this line:
 
-scrapy runspider scraper.py
+scrapy runspider pokemon_scraper.py
