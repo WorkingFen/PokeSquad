@@ -8,24 +8,28 @@ class Pokemon(object):
 
     moves_count = 4
 
-    def __init__(self, variant, name, hp, attack, defence, sp_attack, sp_defence,
-                 speed, damage_multi: dict, occurrence: float, moves: list):
+    def __init__(self, variant, name, hp, attack, defense, sp_attack, sp_defense,
+                 speed, abilities: list, damage_multi: dict, type1, type2, occurrence: float, moves: list):
         self.__available_moves__ = moves
         self.variant = variant
         self.name = name
         self.hp = int(hp)
         self.attack = int(attack)
-        self.defence = int(defence)
+        self.defense = int(defense)
         self.sp_attack = int(sp_attack)
-        self.sp_defence = int(sp_defence)
+        self.sp_defense = int(sp_defense)
         self.speed = int(speed)
+        self.abilities = abilities
         self.damage_multi = damage_multi
+        self.type1 = type1
+        self.type2 = type2
         self.occurrence = occurrence
         self.moves = choices(moves, k=Pokemon.moves_count)
+        self.faint = False
 
-    def mutant(self, pokemons):
+    def mutate(self, pokemons):
         mutant = copy.copy(self)
-        mutations = choices([0, 1, 2, 3, 4, 5], [0.05, 0.45, 0.35, 0.1, 0.04, 0.01], k=1)[0]
+        mutations = choices([0, 1, 2, 3, 4, 5], [0.05, 0.45, 0.35, 0.1, 0.04, 0.01])[0]
         if mutations == 5:
             return choices(pokemons, [p.occurrence for p in pokemons], k=1)[0]
         left = Pokemon.moves_count-mutations
@@ -35,8 +39,31 @@ class Pokemon(object):
 
 class Move(object):
 
-    def __init__(self, type):
+    def __init__(self, name, type, category, power, priority, contact,
+                 sound_type, punch_type, effects: list, sec_effects: list):
+        self.name = name
         self.type = type
+        self.category = category
+        self.power = int(power)
+        self.priority = int(priority)
+        self.contact = bool(contact)
+        self.sound_type = bool(sound_type)
+        self.punch_type = bool(punch_type)
+        self.effects = effects
+        self.sec_effects = sec_effects
+
+
+class Ability(object):
+
+    def __init__(self, name, effects: list):
+        self.name = name
+        self.effects = effects
+
+
+class Category(IntEnum):
+    PHYSICAL = 0
+    SPECIAL = 1
+    OTHER = 2
 
 
 class Type(IntEnum):
@@ -46,7 +73,7 @@ class Type(IntEnum):
     ELECTRIC = 3
     GRASS = 4
     ICE = 5
-    FIGHT = 6
+    FIGHTING = 6
     POISON = 7
     GROUND = 8
     FLYING = 9
@@ -76,4 +103,4 @@ class WeatherCondition(Enum, settings=NoAlias):
     @staticmethod
     def draw():
         conditions = [x for x in WeatherCondition if x.value > 0]
-        return choices(conditions, [x.value for x in conditions], k=1)[0]
+        return choices(conditions, [x.value for x in conditions])[0]

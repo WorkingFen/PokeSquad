@@ -2,11 +2,13 @@ import random
 import utils
 from collections import defaultdict
 from battle import tournament
-from loader import load_pokemons
+import loader as ldr
 
 # constants
 team_size = 6
-all_pokemons = load_pokemons()
+all_pokemons = ldr.load_pokemons()
+all_moves = ldr.load_moves()
+all_abilities = ldr.load_abilities()
 
 # parameters
 selection_acceptance = 0.2  # [0.0 - 1.0]
@@ -69,7 +71,7 @@ def mutate(offspring: list, prob: float):
         mutated_team = []
         for pokemon in team:
             if random.random() < prob:
-                mutated_team.append(pokemon.mutant(all_pokemons))
+                mutated_team.append(pokemon.mutate(all_pokemons))
             else:
                 mutated_team.append(pokemon)
         mutants.append(frozenset(mutated_team))
