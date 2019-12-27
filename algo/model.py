@@ -1,11 +1,11 @@
 from enum import IntEnum
 from random import choices
+from random import sample
 from aenum import Enum, NoAlias
 import copy
 
 
 class Pokemon(object):
-
     moves_count = 4
 
     def __init__(self, variant, name, hp, attack, defense, sp_attack, sp_defense,
@@ -24,7 +24,7 @@ class Pokemon(object):
         self.type1 = type1
         self.type2 = type2
         self.occurrence = occurrence
-        self.moves = choices(moves, k=Pokemon.moves_count)
+        self.moves = sample(moves, k=min(len(moves), Pokemon.moves_count))
         self.faint = False
 
     def mutate(self, pokemons):
@@ -32,8 +32,8 @@ class Pokemon(object):
         mutations = choices([0, 1, 2, 3, 4, 5], [0.05, 0.45, 0.35, 0.1, 0.04, 0.01])[0]
         if mutations == 5:
             return choices(pokemons, [p.occurrence for p in pokemons], k=1)[0]
-        left = Pokemon.moves_count-mutations
-        mutant.moves = choices(self.moves, k=left) + (choices(self.__available_moves__, k=mutations))
+        left = max(Pokemon.moves_count - mutations, 0)
+        mutant.moves = sample(self.moves, k=left) + (sample(self.__available_moves__, k=mutations))
         return mutant
 
 
@@ -46,9 +46,9 @@ class Move(object):
         self.category = category
         self.power = int(power)
         self.priority = int(priority)
-        self.contact = bool(contact)
-        self.sound_type = bool(sound_type)
-        self.punch_type = bool(punch_type)
+        self.contact = bool(int(contact))
+        self.sound_type = bool(int(sound_type))
+        self.punch_type = bool(int(punch_type))
         self.effects = effects
         self.sec_effects = sec_effects
 

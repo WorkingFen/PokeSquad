@@ -1,0 +1,443 @@
+﻿name;type;category;power;priority;contact;sound_type;punch_type;effects;sec_effects;;
+Absorb;grass;special;20;0;0;0;0;[];[];A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.;User recovers half the damage inflicted.
+Accelerock;rock;physical;40;1;1;0;0;[];[];The user smashes into the target at high speed. This move always goes first.;Has increased Speed Priority
+Acid;poison;special;40;0;0;0;0;[];[];Opposing Pokémon are attacked with a spray of harsh acid. This may also lower their Sp. Def stats.;May lower opponent's Special Defense one stage.
+Acid Spray;poison;special;40;0;0;0;0;[];[];The user spits fluid that works to melt the target. This harshly lowers the target's Sp. Def stat.;Lowers opponent's Special Defense two stages.
+Acrobatics;flying;physical;55;0;1;0;0;[];[];The user nimbly strikes the target. If the user is not holding an item, this attack inflicts massive damage.;Increases damage by 100% if user is not holding an item.
+Aerial Ace;flying;physical;60;0;1;0;0;[];[];The user confounds the target with speed, then slashes. This attack never misses.;Cannot miss.
+Aeroblast;flying;special;100;0;0;0;0;[];[];A vortex of air is shot at the target to inflict damage. Critical hits land more easily.;Has an increased Critical Hit ratio
+Air Cutter;flying;special;60;0;0;0;0;[];[];The user launches razor-like wind to slash opposing Pokémon. Critical hits land more easily.;Has an increased Critical Hit ratio
+Air Slash;flying;special;75;0;0;0;0;[];[];The user attacks with a blade of air that slices even the sky. This may also make the target flinch.;May cause opponent to flinch.
+Anchor Shot;steel;physical;80;0;1;0;0;[];[];The user entangles the target with its anchor chain while attacking. The target becomes unable to flee.;Prevents opponent from switching
+Ancient Power;rock;special;60;0;0;0;0;[];[];The user attacks with a prehistoric power. This may also raise all the user's stats at once.;May raise all user's stats one stage.
+Apple Acid;grass;special;80;0;0;0;0;[];[];The user attacks the target with an acidic liquid created from tart apples. This also lowers the target's Sp. Def stat.;Lowers opponent's Sp. Def one stage
+Aqua Jet;water;physical;40;1;1;0;0;[];[];The user lunges at the target at a speed that makes it almost invisible. This move always goes first.;Has increased Speed Priority
+Aqua Tail;water;physical;90;0;1;0;0;[];[];The user attacks by swinging its tail as if it were a vicious wave in a raging storm.;No effect.
+Arm Thrust;fighting;physical;15;0;1;0;0;[];[];The user lets loose a flurry of open-palmed arm thrusts that hit two to five times in a row.;Attacks 2-5 times in a row. 37.5% chance of 2 hits. 37.5% chance of 3 hits. 12.5% chance of 4 hits. 12.5% chance of 5 hits
+Assurance;dark;physical;60;0;1;0;0;[];[];If the target has already taken some damage in the same turn, this attack's power is doubled.;Doubles damage if target has already received damage this turn.
+Astonish;ghost;physical;30;0;1;0;0;[];[];The user attacks the target while shouting in a startling fashion. This may also make the target flinch.;May cause opponent to flinch.
+Attack Order;bug;physical;90;0;0;0;0;[];[];The user calls out its underlings to pummel the target. Critical hits land more easily.;Has an increased Critical Hit ratio
+Aura Sphere;fighting;special;80;0;0;0;0;[];[];The user lets loose a blast of aura power from deep within its body at the target. This attack never misses.;Cannot miss.
+Aura Wheel;electric;physical;110;0;0;0;0;[];[];Morpeko attacks and raises its Speed with the energy stored in its cheeks. This move's type changes depending on the user's form.;Raises user's Speed by 1 stage. Changes type to Dark-type if user is in Hangry Mode
+Aurora Beam;ice;special;65;0;0;0;0;[];[];The target is hit with a rainbow-colored beam. This may also lower the target's Attack stat.;May lower opponent's Attack one stage.
+Avalanche;ice;physical;60;-4;1;0;0;[];[];The power of this attack move is doubled if the user has been hurt by the target in the same turn.;Power doubles if user was hit before using the Attack.
+Barrage;normal;physical;15;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Attacks 2-5 times in a row. 37.5% chance of 2 hits. 37.5% chance of 3 hits. 12.5% chance of 4 hits. 12.5% chance of 5 hits
+Beak Blast;flying;physical;100;-3;0;0;0;[];[];The user first heats up its beak, and then it attacks the target. Making direct contact with the Pokémon while it's heating up its beak results in a burn.;Moves first in turn to charge, and last in the same turn to Attack. If opponent makes physical contact between this, the opponent is Burned
+Beat Up;dark;physical;1;0;0;0;0;[];[];The user gets all party Pokémon to attack the target. The more party Pokémon, the greater the number of attacks.;Does additional damage for every Pokémon in trainer's team.
+Belch;poison;special;120;0;0;0;0;[];[];The user lets out a damaging belch at the target. The user must eat a held Berry to use this move.;Consumes a Berry
+Bide;normal;physical;1;1;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;User takes hits for 2 rounds, then strikes back.
+Bind;normal;physical;15;0;1;0;0;[];[];Things such as long bodies or tentacles are used to bind and squeeze the target for four to five turns.;Traps opponent.
+Bite;dark;physical;60;0;1;0;0;[];[];The target is bitten with viciously sharp fangs. This may also make the target flinch.;May cause opponent to flinch.
+Blaze Kick;fire;physical;85;0;1;0;0;[];[];The user launches a kick that lands a critical hit more easily. This may also leave the target with a burn.;Has high critical hit ratio. May induce burn.
+Blizzard;ice;special;110;0;0;0;0;[];[];A howling blizzard is summoned to strike opposing Pokémon. This may also leave the opposing Pokémon frozen.;May Freeze opponent.
+Blue Flare;fire;special;130;0;0;0;0;[];[];The user attacks by engulfing the target in an intense, yet beautiful, blue flame. This may also leave the target with a burn.;May induce burn.
+Body Slam;normal;physical;85;0;1;0;0;[];[];The user drops onto the target with its full body weight. This may also leave the target with paralysis.;May induce paralysis.
+Bolt Beak;electric;physical;85;0;1;0;0;[];[];The user stabs the target with its electrified beak. If the user attacks before the target, the power of this move is doubled.;Doubles damage if the user moves before the target
+Bolt Strike;electric;physical;130;0;1;0;0;[];[];The user surrounds itself with a great amount of electricity and charges its target. This may also leave the target with paralysis.;May induce paralysis.
+Bone Club;ground;physical;65;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;May cause opponent to flinch.
+Bone Rush;ground;physical;25;0;0;0;0;[];[];The user strikes the target with a hard bone two to five times in a row.;Attacks 2-5 times in a row. 37.5% chance of 2 hits. 37.5% chance of 3 hits. 12.5% chance of 4 hits. 12.5% chance of 5 hits
+Bonemerang;ground;physical;50;0;0;0;0;[];[];The user throws the bone it holds. The bone loops around to hit the target twice—coming and going.;Attacks twice in a row.
+Boomburst;normal;special;140;0;0;1;0;[];[];The user attacks everything around it with the destructive power of a terrible, explosive sound.;No effect.
+Bounce;flying;physical;85;0;1;0;0;[];[];The user bounces up high, then drops on the target on the second turn. This may also leave the target with paralysis.;The user is protected the first turn, Attacks the second turn. May induce Paralysis
+Branch Poke;grass;physical;40;0;1;0;0;[];[];The user attacks the target by poking it with a sharply pointed branch.;No effect.
+Brave Bird;flying;physical;120;0;1;0;0;[];[];The user tucks in its wings and charges from a low altitude. This also damages the user quite a lot.;User takes recoil damage equal to a third of the damage inflicted.
+Breaking Swipe;dragon;physical;60;0;1;0;0;[];[];The user swings its tough tail wildly and attacks opposing Pokémon. This also lowers their Attack stats.;Lowers all opponent's Attack one stage
+Brick Break;fighting;physical;75;0;1;0;0;[];[];The user attacks with a swift chop. It can also break barriers, such as Light Screen and Reflect.;[DEPTH]Destroys protective barriers.
+Brine;water;special;65;0;0;0;0;[];[];If the target's HP is half or less, this attack will hit with double the power.;Doubles damage if target has less than 50% HP
+Brutal Swing;dark;physical;60;0;1;0;0;[];[];The user swings its body around violently to inflict damage on everything in its vicinity.;In Doubles, if one of the two opponents protects or is a Fairy-type Pokémon, it hits the opponent that doesn't protect twice.
+Bubble;water;special;40;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;May lower opponent's Speed one stage.
+Bubble Beam;water;special;65;0;0;0;0;[];[];A spray of bubbles is forcefully ejected at the target. This may also lower the target's Speed stat.;May lower opponent's Speed one stage.
+Bug Bite;bug;physical;60;0;1;0;0;[];[];The user bites the target. If the target is holding a Berry, the user eats it and gains its effect.;Removes target's Berry and uses its effect
+Bug Buzz;bug;special;90;0;0;1;0;[];[];The user generates a damaging sound wave by vibration. This may also lower the target's Sp. Def stat.;May lower opponent's Special Defense one stage.
+Bulldoze;ground;physical;60;0;0;0;0;[];[];The user strikes everything around it by stomping down on the ground. This lowers the Speed stats of those hit.;May lower opponent's Speed one stage.
+Bullet Punch;steel;physical;40;1;1;0;1;[];[];The user strikes the target with tough punches as fast as bullets. This move always goes first.;Has increased Speed Priority
+Bullet Seed;grass;physical;25;0;0;0;0;[];[];The user forcefully shoots seeds at the target two to five times in a row.;Attacks 2-5 times in a row. 37.5% chance of 2 hits. 37.5% chance of 3 hits. 12.5% chance of 4 hits. 12.5% chance of 5 hits
+Burn Up;fire;special;130;0;0;0;0;[];[];To inflict massive damage, the user burns itself out. After using this move, the user will no longer be Fire type.;Removes Fire-type from user. If user was pure Fire-type, it is now without a type.
+Charge Beam;electric;special;50;0;0;0;0;[];[];The user attacks the target with an electric charge. The user may use any remaining electricity to raise its Sp. Atk stat.;May raise user's Special Attack one stage
+Chatter;flying;special;65;0;0;1;0;[];[];The user attacks the target with sound waves of deafening chatter. This confuses the target.;Confuses the opponent
+Chip Away;normal;physical;70;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Ignores stat changes
+Circle Throw;fighting;physical;60;-6;1;0;0;[];[];The target is thrown, and a different Pokémon is dragged out. In the wild, this ends a battle against a single Pokémon.;Forces opponent to switch Pokémon.
+Clamp;water;physical;35;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Traps opponent.
+Clanging Scales;dragon;special;110;0;0;1;0;[];[];The user rubs the scales on its entire body and makes a huge noise to attack opposing Pokémon. The user's Defense stat goes down after the attack.;Lowers user's Defense one stage.
+Clear Smog;poison;special;50;0;0;0;0;[];[];The user attacks the target by throwing a clump of special mud. All stat changes are returned to normal.;Removes all stat changes
+Close Combat;fighting;physical;120;0;1;0;0;[];[];The user fights the target up close without guarding itself. This also lowers the user's Defense and Sp. Def stats.;Lowers user's Defense & Special Defense stats by one stage.
+Comet Punch;normal;physical;18;0;1;0;1;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Attacks 2-5 times in a row. 37.5% chance of 2 hits. 37.5% chance of 3 hits. 12.5% chance of 4 hits. 12.5% chance of 5 hits
+Confusion;psychic;special;50;0;0;0;0;[];[];The target is hit by a weak telekinetic force. This may also confuse the target.;May induce Confusion
+Constrict;normal;physical;10;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;May lower opponent's Speed one stage.
+Core Enforcer;dragon;special;100;0;0;0;0;[];[];If the Pokémon the user has inflicted damage on have already used their moves, this move eliminates the effect of the target's Ability.;If used after the target Attacks, the target's ability is removed
+Counter;fighting;physical;1;-5;1;0;0;[];[];A retaliation move that counters any physical attack, inflicting double the damage taken.;If hit by a physical Attack, deals double the damage received.
+Covet;normal;physical;60;0;1;0;0;[];[];The user endearingly approaches the target, then steals the target's held item.;May steal opponent's item (temporarily in trainer battles).
+Crabhammer;water;physical;100;0;1;0;0;[];[];The target is hammered with a large pincer. Critical hits land more easily.;Has an increased Critical Hit ratio
+Cross Chop;fighting;physical;100;0;1;0;0;[];[];The user delivers a double chop with its forearms crossed. Critical hits land more easily.;Has an increased Critical Hit ratio
+Cross Poison;poison;physical;70;0;1;0;0;[];[];A slashing attack with a poisonous blade that may also poison the target. Critical hits land more easily.;Has high critical hit ratio. May induce poison.
+Crunch;dark;physical;80;0;1;0;0;[];[];The user crunches up the target with sharp fangs. This may also lower the target's Defense stat.;May lower opponent's Defense one stage.
+Crush Claw;normal;physical;75;0;1;0;0;[];[];The user slashes the target with hard and sharp claws. This may also lower the target's Defense stat.;May lower opponent's Defense one stage.
+Crush Grip;normal;physical;1;0;1;0;0;[];[];The target is crushed with great force. The more HP the target has left, the greater this move's power.;[DEPTH]Increases damage the higher the target's Hit Points
+Cut;normal;physical;50;0;1;0;0;[];[];The target is cut with a scythe or claw.;No effect.
+Dark Pulse;dark;special;80;0;0;0;0;[];[];The user releases a horrible aura imbued with dark thoughts. This may also make the target flinch.;May cause opponent to flinch.
+Darkest Lariat;dark;physical;85;0;1;0;0;[];[];The user swings both arms and hits the target. The target's stat changes don't affect this attack's damage.;Ignores stat changes
+Dazzling Gleam;fairy;special;80;0;0;0;0;[];[];The user damages opposing Pokémon by emitting a powerful flash.;No effect.
+Diamond Storm;rock;physical;100;0;0;0;0;[];[];The user whips up a storm of diamonds to damage opposing Pokémon. This may also sharply raise the user's Defense stat.;May raise user's Defense 2 stages
+Dig;ground;physical;80;0;1;0;0;[];[];The user burrows into the ground, then attacks on the next turn.;The user is protected the first turn, Attacks the second turn.
+Disarming Voice;fairy;special;40;0;0;1;0;[];[];Letting out a charming cry, the user does emotional damage to opposing Pokémon. This attack never misses.;Never Misses.
+Discharge;electric;special;80;0;0;0;0;[];[];The user strikes everything around it by letting loose a flare of electricity. This may also cause paralysis.;May induce paralysis.
+Dive;water;physical;80;0;1;0;0;[];[];Diving on the first turn, the user floats up and attacks on the next turn.;The user is protected the first turn, Attacks the second turn.
+Dizzy Punch;normal;physical;70;0;1;0;1;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;May induce Confusion
+Doom Desire;steel;special;140;0;0;0;0;[];[];Two turns after this move is used, a concentrated bundle of light blasts the target.;Damage delays 2 turns.
+Double Hit;normal;physical;35;0;1;0;0;[];[];The user slams the target with a long tail, vines, or a tentacle. The target is hit twice in a row.;Attacks twice in a row.
+Double Iron Bash;steel;physical;60;0;1;0;1;[];[];The user rotates, centering the hex nut in its chest, and then strikes with its arms twice in a row. This may also make the target flinch.;May cause opponent to flinch.
+Double Kick;fighting;physical;30;0;1;0;0;[];[];The target is quickly kicked twice in succession using both feet.;Attacks twice in a row.
+Double Slap;normal;physical;15;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Attacks 2-5 times in a row. 37.5% chance of 2 hits. 37.5% chance of 3 hits. 12.5% chance of 4 hits. 12.5% chance of 5 hits
+Double-Edge;normal;physical;120;0;1;0;0;[];[];A reckless, life-risking tackle in which the user rushes the target. This also damages the user quite a lot.;User takes recoil damage equal to a third of the damage inflicted.
+Dragon Breath;dragon;special;60;0;0;0;0;[];[];The user exhales a mighty gust that inflicts damage. This may also leave the target with paralysis.;May induce paralysis.
+Dragon Claw;dragon;physical;80;0;1;0;0;[];[];The user slashes the target with huge sharp claws.;No effect.
+Dragon Darts;dragon;physical;50;0;0;0;0;[];[];The user attacks twice using Dreepy. If there are two targets, this move hits each target once.;In Doubles, if one of the two opponents protects or is a Fairy-type Pokémon, it hits the opponent that doesn't protect twice.
+Dragon Hammer;dragon;physical;90;0;1;0;0;[];[];The user uses its body like a hammer to attack the target and inflict damage.;No effect.
+Dragon Pulse;dragon;special;85;0;0;0;0;[];[];The target is attacked with a shock wave generated by the user's gaping mouth.;No effect.
+Dragon Rage;dragon;special;1;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Inflicts 40 HP damage.
+Dragon Rush;dragon;physical;100;0;1;0;0;[];[];The user tackles the target while exhibiting overwhelming menace. This may also make the target flinch.;May cause opponent to flinch.
+Dragon Tail;dragon;physical;60;-6;1;0;0;[];[];The target is knocked away, and a different Pokémon is dragged out. In the wild, this ends a battle against a single Pokémon.;Forces opponent to switch Pokémon.
+Drain Punch;fighting;physical;75;0;1;0;1;[];[];An energy-draining punch. The user's HP is restored by half the damage taken by the target.;User recovers half the damage inflicted.
+Draining Kiss;fairy;special;50;0;1;0;0;[];[];The user steals the target's HP with a kiss. The user's HP is restored by over half of the damage taken by the target.;User recovers 75% the damage inflicted.
+Dream Eater;psychic;special;100;0;0;0;0;[];[];The user eats the dreams of a sleeping target. The user's HP is restored by half the damage taken by the target.;User recovers half the damage inflicted on a sleeping opponent.
+Drill Peck;flying;physical;80;0;1;0;0;[];[];A corkscrewing attack that strikes the target with a sharp beak acting as a drill.;No effect.
+Drill Run;ground;physical;80;0;1;0;0;[];[];The user crashes into its target while rotating its body like a drill. Critical hits land more easily.;Has an increased Critical Hit ratio
+Drum Beating;grass;physical;80;0;0;0;0;[];[];The user plays its drum, controlling the drum's roots to attack the target. This also lowers the target's Speed stat.;Lowers opponent's Speed one stage.
+Dual Chop;dragon;physical;40;0;1;0;0;[];[];The user attacks its target by hitting it with brutal strikes. The target is hit twice in a row.;Attacks twice in a row.
+Dynamax Cannon;dragon;special;100;0;0;0;0;[];[];The user unleashes a strong beam from its core. This move deals twice the damage if the target is Dynamaxed.;Increases damage by 100% if target is Dynamaxed
+Dynamic Punch;fighting;physical;100;0;1;0;1;[];[];The user punches the target with full, concentrated power. This confuses the target if it hits.;May induce Confusion
+Earth Power;ground;special;90;0;0;0;0;[];[];The user makes the ground under the target erupt with power. This may also lower the target's Sp. Def stat.;May lower opponent's Special Defense one stage.
+Earthquake;ground;physical;100;0;0;0;0;[];[];The user sets off an earthquake that strikes every Pokémon around it.;Hits everyone on the field.
+Echoed Voice;normal;special;40;0;0;1;0;[];[];The user attacks the target with an echoing voice. If this move is used every turn, its power is increased.;[DEPTH]Increases power if used consecutively
+Egg Bomb;normal;physical;100;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;No effect.
+Electro Ball;electric;special;1;0;0;0;0;[];[];The user hurls an electric orb at the target. The faster the user is than the target, the greater the move's power.;[DEPTH]Increases damage based on the Speed of the user and opponent
+Electroweb;electric;special;55;0;0;0;0;[];[];The user attacks and captures opposing Pokémon using an electric net. This lowers their Speed stats.;Lowers opponent's Speed one stage.
+Ember;fire;special;40;0;0;0;0;[];[];The target is attacked with small flames. This may also leave the target with a burn.;May induce burn.
+Endeavor;normal;physical;1;0;1;0;0;[];[];This attack move cuts down the target's HP to equal the user's HP.;Reduces the target's Hit Points to match the current Hit Points of the user.
+Energy Ball;grass;special;90;0;0;0;0;[];[];The user draws power from nature and fires it at the target. This may also lower the target's Sp. Def stat.;May lower opponent's Special Defense one stage.
+Eruption;fire;special;150;0;0;0;0;[];[];The user attacks opposing Pokémon with explosive fury. The lower the user's HP, the lower the move's power.;[DEPTH]Inflicts more damage when the user's HP is high.
+Eternabeam;dragon;special;160;0;0;0;0;[];[];This is Eternatus's most powerful attack in its original form. The user can't move on the next turn.;User cannot Attack on the next turn.
+Explosion;normal;physical;250;0;0;0;0;[];[];The user attacks everything around it by causing a tremendous explosion. The user faints upon using this move.;User faints
+Extrasensory;psychic;special;80;0;0;0;0;[];[];The user attacks with an odd, unseeable power. This may also make the target flinch.;May cause opponent to flinch.
+Extreme Speed;normal;physical;80;2;1;0;0;[];[];The user charges the target at blinding speed. This move always goes first.;Has increased Speed Priority
+Facade;normal;physical;70;0;1;0;0;[];[];This attack move doubles its power if the user is poisoned, burned, or paralyzed.;Move's power is doubled if afflicted with a Status Condition
+Fairy Wind;fairy;special;40;0;0;0;0;[];[];The user stirs up a fairy wind and strikes the target with it.;No effect.
+Fake Out;normal;physical;40;3;1;0;0;[];[];This attack hits first and makes the target flinch. It only works the first turn each time the user enters battle.;Causes opponent to flinch.
+False Surrender;dark;physical;80;0;1;0;0;[];[];The user pretends to bow its head, but then it stabs the target with its disheveled hair. This attack never misses.;Never Misses.
+False Swipe;normal;physical;40;0;1;0;0;[];[];A restrained attack that prevents the target from fainting. The target is left with at least 1 HP.;Leaves the foe with at least 1 HP.
+Feint;normal;physical;30;2;0;0;0;[];[];This attack hits a target using a move such as Protect or Detect. This also lifts the effects of those moves.;Ignores & removes Protect & Detect
+Feint Attack;dark;physical;60;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Cannot miss.
+Fell Stinger;bug;physical;50;0;1;0;0;[];[];When the user knocks out a target with this move, the user's Attack stat rises drastically.;Raises user's Attack three stages if it knocks the target out.
+Fiery Dance;fire;special;80;0;0;0;0;[];[];Cloaked in flames, the user attacks the target by dancing and flapping its wings. This may also raise the user's Sp. Atk stat.;May raise user's Special Attack one stage
+Final Gambit;fighting;special;1;0;0;0;0;[];[];The user risks everything to attack its target. The user faints but does damage equal to its HP.;User faints. Does damage to the opponent equal to the amount of lost HP on the user.
+Fire Blast;fire;special;110;0;0;0;0;[];[];The target is attacked with an intense blast of all-consuming fire. This may also leave the target with a burn.;May induce burn.
+Fire Fang;fire;physical;65;0;1;0;0;[];[];The user bites with flame-cloaked fangs. This may also make the target flinch or leave it with a burn.;May BURN opponent or cause opponent to flinch.
+Fire Lash;fire;physical;80;0;1;0;0;[];[];The user strikes the target with a burning lash. This also lowers the target's Defense stat.;Lowers opponent's Defense one stage.
+Fire Punch;fire;physical;75;0;1;0;1;[];[];The target is punched with a fiery fist. This may also leave the target with a burn.;May induce burn.
+Fire Spin;fire;special;35;0;0;0;0;[];[];The target becomes trapped within a fierce vortex of fire that rages for four to five turns.;Traps opponent.
+First Impression;bug;physical;90;2;1;0;0;[];[];Although this move has great power, it only works the first turn each time the user enters battle.;Only works on first turn user is in battle
+Fishious Rend;water;physical;85;0;1;0;0;[];[];The user rends the target with its hard gills. If the user attacks before the target, the power of this move is doubled.;Doubles damage if the user moves before the target
+Fissure;ground;physical;1;0;0;0;0;[];[];The user opens up a fissure in the ground and drops the target in. The target faints instantly if this attack hits.;May cause one-hit KO.
+Flail;normal;physical;1;0;1;0;0;[];[];The user flails about aimlessly to attack. The less HP the user has, the greater the move's power.;Inflicts more damage when the user's HP is down.
+Flame Burst;fire;special;70;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;[DEPTH]Damages Pokémon to the side of the target equal to 1/16th of their max Hit Points
+Flame Charge;fire;physical;50;0;1;0;0;[];[];Cloaking itself in flame, the user attacks the target. Then, building up more power, the user raises its Speed stat.;Raises user's Speed one stage.
+Flame Wheel;fire;physical;60;0;1;0;0;[];[];The user cloaks itself in fire and charges at the target. This may also leave the target with a burn.;May induce burn.
+Flamethrower;fire;special;90;0;0;0;0;[];[];The target is scorched with an intense blast of fire. This may also leave the target with a burn.;May induce burn.
+Flare Blitz;fire;physical;120;0;1;0;0;[];[];The user cloaks itself in fire and charges the target. This also damages the user quite a lot. This attack may leave the target with a burn.;User receives 1/3rd of damage in re-coil. May BURN opponent.
+Flash Cannon;steel;special;80;0;0;0;0;[];[];The user gathers all its light energy and releases it all at once. This may also lower the target's Sp. Def stat.;May lower opponent's Special Defense one stage.
+Fleur Cannon;fairy;special;130;0;0;0;0;[];[];The user unleashes a strong beam. The attack's recoil harshly lowers the user's Sp. Atk stat.;Lowers user's Special Attack two stages.
+Fling;dark;physical;1;0;0;0;0;[];[];The user flings its held item at the target to attack. This move's power and effects depend on the item.;[DEPTH]Item's power and effects change based on the user's hold item. User no longer has the hold item.
+Fly;flying;physical;90;0;1;0;0;[];[];The user flies up into the sky and then strikes its target on the next turn.;The user is protected the first turn, Attacks the second turn.
+Flying Press;fighting;physical;100;0;1;0;0;[];[];The user dives down onto the target from the sky. This move is Fighting and Flying type simultaneously.;[DEPTH]Has a secondary Flying-type
+Focus Blast;fighting;special;120;0;0;0;0;[];[];The user heightens its mental focus and unleashes its power. This may also lower the target's Sp. Def stat.;May lower opponent's Special Defense one stage.
+Focus Punch;fighting;physical;150;-3;1;0;1;[];[];The user focuses its mind before launching a punch. This move fails if the user is hit before it is used.;Moves first in turn to charge, and last in the same turn to Attack. If damaged between this, the user flinches.
+Force Palm;fighting;physical;60;0;1;0;0;[];[];The target is attacked with a shock wave. This may also leave the target with paralysis.;May induce paralysis.
+Foul Play;dark;physical;95;0;1;0;0;[];[];The user turns the target's power against it. The higher the target's Attack stat, the greater the damage it deals.;[DEPTH]Users the opponent's Attack stat in damage calculation
+Freeze Shock;ice;physical;140;0;0;0;0;[];[];On the second turn, the user hits the target with electrically charged ice. This may also leave the target with paralysis.;May induce paralysis.
+Freeze-Dry;ice;special;70;0;0;0;0;[];[];The user rapidly cools the target. This may also leave the target frozen. This move is super effective on Water types.;[DEPTH]Will always have a Super Effective hit on Water-type Pokémon
+Frost Breath;ice;special;60;0;0;0;0;[];[];The user blows its cold breath on the target. This attack always results in a critical hit.;Always inflicts a Critical Hit
+Frustration;normal;physical;1;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;[DEPTH]The less happy the user, the stronger the Attack.
+Fury Attack;normal;physical;15;0;1;0;0;[];[];The target is jabbed repeatedly with a horn or beak two to five times in a row.;Attacks 2-5 times in a row. 37.5% chance of 2 hits. 37.5% chance of 3 hits. 12.5% chance of 4 hits. 12.5% chance of 5 hits
+Fury Cutter;bug;physical;40;0;1;0;0;[];[];The target is slashed with scythes or claws. This attack becomes more powerful if it hits in succession.;Move's power raises next turn if the move is successful.
+Fury Swipes;normal;physical;18;0;1;0;0;[];[];The target is raked with sharp claws or scythes quickly two to five times in a row.;Attacks 2-5 times in a row. 37.5% chance of 2 hits. 37.5% chance of 3 hits. 12.5% chance of 4 hits. 12.5% chance of 5 hits
+Fusion Bolt;electric;physical;100;0;0;0;0;[];[];The user throws down a giant lightning bolt. This move's power is increased when influenced by an enormous flame.;[DEPTH]Doubles damage if ally used Fusion Flare this turn
+Fusion Flare;fire;special;100;0;0;0;0;[];[];The user brings down a giant flame. This move's power is increased when influenced by an enormous lightning bolt.;[DEPTH]Doubles damage if ally used Fusion Bolt this turn
+Future Sight;psychic;special;120;0;0;0;0;[];[];Two turns after this move is used, a hunk of psychic energy attacks the target.;[DEPTH]Damage delays 2 turns.
+Gear Grind;steel;physical;50;0;1;0;0;[];[];The user attacks by throwing steel gears at its target twice.;Attacks twice in a row.
+Giga Drain;grass;special;75;0;0;0;0;[];[];A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.;User recovers half the damage inflicted.
+Giga Impact;normal;physical;150;0;1;0;0;[];[];The user charges at the target using every bit of its power. The user can't move on the next turn.;User cannot Attack on the next turn.
+Glaciate;ice;special;65;0;0;0;0;[];[];The user attacks by blowing freezing cold air at opposing Pokémon. This lowers their Speed stats.;Lowers opponent's Speed one stage.
+Grass Knot;grass;special;1;0;1;0;0;[];[];The user snares the target with grass and trips it. The heavier the target, the greater the move's power.;[DEPTH]Damage inflicted raises the heavier the opponent is.
+Grav Apple;grass;physical;80;0;0;0;0;[];[];The user inflicts damage by dropping an apple from high above. This also lowers the target's Defense stat.;Lowers opponent's Defense one stage.
+Guillotine;normal;physical;1;0;1;0;0;[];[];A vicious, tearing attack with big pincers. The target faints instantly if this attack hits.;May cause one-hit KO.
+Gunk Shot;poison;physical;120;0;0;0;0;[];[];The user shoots filthy garbage at the target to attack. This may also poison the target.;May induce poison.
+Gust;flying;special;40;0;0;0;0;[];[];A gust of wind is whipped up by wings and launched at the target to inflict damage.;Hits opponents using Fly
+Gyro Ball;steel;physical;1;0;1;0;0;[];[];The user tackles the target with a high-speed spin. The slower the user compared to the target, the greater the move's power.;[DEPTH]Increases power the lower the target's Speed
+Hammer Arm;fighting;physical;100;0;1;0;1;[];[];The user swings and hits with its strong, heavy fist. It lowers the user's Speed, however.;Lowers user's Speed one stage.
+Head Charge;normal;physical;120;0;1;0;0;[];[];The user charges its head into its target, using its powerful guard hair. This also damages the user a little.;User takes recoil damage equal to 25% of the damage inflicted.
+Head Smash;rock;physical;150;0;1;0;0;[];[];The user attacks the target with a hazardous, full-power headbutt. This also damages the user terribly.;User receives half the damage inflicted in recoil
+Headbutt;normal;physical;70;0;1;0;0;[];[];The user sticks out its head and attacks by charging straight into the target. This may also make the target flinch.;May cause opponent to flinch.
+Heart Stamp;psychic;physical;60;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;May cause opponent to flinch.
+Heat Crash;fire;physical;1;0;1;0;0;[];[];The user slams its target with its flame-covered body. The more the user outweighs the target, the greater the move's power.;[DEPTH]Increases damage based on the weight of the user and opponent
+Heat Wave;fire;special;95;0;0;0;0;[];[];The user attacks by exhaling hot breath on opposing Pokémon. This may also leave those Pokémon with a burn.;May induce burn.
+Heavy Slam;steel;physical;1;0;1;0;0;[];[];The user slams into the target with its heavy body. The more the user outweighs the target, the greater the move's power.;[DEPTH]Increases damage based on the weight of the user and opponent
+Hex;ghost;special;65;0;0;0;0;[];[];This relentless attack does massive damage to a target affected by status conditions.;Doubles damage when targed is afflicted with a status condition
+Hidden Power;normal;special;60;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Type depends upon user's IVs.
+High Horsepower;ground;physical;95;0;1;0;0;[];[];The user fiercely attacks the target using its entire body.;No effect.
+High Jump Kick;fighting;physical;130;0;1;0;0;[];[];The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.;If Attack misses, user takes 1/2 max HP of damage.
+Hold Back;normal;physical;40;0;1;0;0;[];[];The user holds back when it attacks, and the target is left with at least 1 HP.;Leaves the foe with at least 1 HP.
+Horn Attack;normal;physical;65;0;1;0;0;[];[];The target is jabbed with a sharply pointed horn to inflict damage.;No effect.
+Horn Drill;normal;physical;1;0;1;0;0;[];[];The user stabs the target with a horn that rotates like a drill. The target faints instantly if this attack hits.;May cause one-hit KO.
+Horn Leech;grass;physical;75;0;1;0;0;[];[];The user drains the target's energy with its horns. The user's HP is restored by half the damage taken by the target.;User recovers half the damage inflicted.
+Hurricane;flying;special;110;0;0;0;0;[];[];The user attacks by wrapping its opponent in a fierce wind that flies up into the sky. This may also confuse the target.;[DEPTH]May induce CONFUSION. Damages Pokémon using Fly, Bounce or Sky Drop
+Hydro Pump;water;special;110;0;0;0;0;[];[];The target is blasted by a huge volume of water launched under great pressure.;No effect.
+Hyper Beam;normal;special;150;0;0;0;0;[];[];The target is attacked with a powerful beam. The user can't move on the next turn.;User cannot Attack on the next turn.
+Hyper Fang;normal;physical;80;0;1;0;0;[];[];The user bites hard on the target with its sharp front fangs. This may also make the target flinch.;May cause opponent to flinch.
+Hyper Voice;normal;special;90;0;0;1;0;[];[];The user lets loose a horribly echoing shout with the power to inflict damage.;No effect.
+Hyperspace Hole;psychic;special;80;0;0;0;0;[];[];Using a hyperspace hole, the user appears right next to the target and strikes. This also hits a target using a move such as Protect or Detect.;Hits through Protect
+Ice Ball;ice;physical;30;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;"Uses the same move for 5 turns; move's power raises if it hits."
+Ice Beam;ice;special;90;0;0;0;0;[];[];The target is struck with an icy-cold beam of energy. This may also leave the target frozen.;May induce freeze.
+Ice Burn;ice;special;140;0;0;0;0;[];[];On the second turn, an ultracold, freezing wind surrounds the target. This may leave the target with a burn.;May induce burn.
+Ice Fang;ice;physical;65;0;1;0;0;[];[];The user bites with cold-infused fangs. This may also make the target flinch or leave it frozen.;May FREEZE opponent or cause opponent to flinch.
+Ice Hammer;ice;physical;100;0;1;0;0;[];[];The user swings and hits with its strong, heavy fist. It lowers the user's Speed, however.;Lowers user's Speed one stage.
+Ice Punch;ice;physical;75;0;1;0;1;[];[];The target is punched with an icy fist. This may also leave the target frozen.;May induce freeze.
+Ice Shard;ice;physical;40;1;0;0;0;[];[];The user flash-freezes chunks of ice and hurls them at the target. This move always goes first.;Has increased Speed Priority
+Icicle Crash;ice;physical;85;0;0;0;0;[];[];The user attacks by harshly dropping large icicles onto the target. This may also make the target flinch.;May cause opponent to flinch.
+Icicle Spear;ice;physical;25;0;0;0;0;[];[];The user launches sharp icicles at the target two to five times in a row.;Attacks 2-5 times in a row. 37.5% chance of 2 hits. 37.5% chance of 3 hits. 12.5% chance of 4 hits. 12.5% chance of 5 hits
+Icy Wind;ice;special;55;0;0;0;0;[];[];The user attacks with a gust of chilled air. This also lowers opposing Pokémon's Speed stats.;May lower opponent's Speed one stage.
+Incinerate;fire;special;60;0;0;0;0;[];[];The user attacks opposing Pokémon with fire. If a Pokémon is holding a certain item, such as a Berry, the item becomes burned up and unusable.;Removes opponent's hold berry.
+Inferno;fire;special;100;0;0;0;0;[];[];The user attacks by engulfing the target in an intense fire. This leaves the target with a burn.;May induce burn.
+Infestation;bug;special;20;0;1;0;0;[];[];The target is infested and attacked for four to five turns. The target can't flee during this time.;Traps opponent.
+Iron Head;steel;physical;80;0;1;0;0;[];[];The user slams the target with its steel-hard head. This may also make the target flinch.;May cause opponent to flinch.
+Iron Tail;steel;physical;100;0;1;0;0;[];[];The target is slammed with a steel-hard tail. This may also lower the target's Defense stat.;May lower opponent's Defense one stage.
+Jaw Lock;dark;physical;80;0;1;0;0;[];[];This move prevents the user and the target from switching out until either of them faints. The effect goes away if either of the Pokémon leaves the field.;Prevents both the user and the target from escaping
+Judgment;normal;special;100;0;0;0;0;[];[];The user releases countless shots of light at the target. This move's type varies depending on the kind of Plate the user is holding.;Changes the type of the move based upon the item being held
+Jump Kick;fighting;physical;100;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;If Attack misses, user takes 1/2 max HP of damage.
+Karate Chop;fighting;physical;50;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Has an increased Critical Hit ratio
+Knock Off;dark;physical;65;0;1;0;0;[];[];The user slaps down the target's held item, and that item can't be used in that battle. The move does more damage if the target has a held item.;[DEPTH]Knocks down opponent's held item to prevent its use. Increases power by 50% if so.
+Lands Wrath;ground;physical;90;0;0;0;0;[];[];The user gathers the energy of the land and focuses that power on opposing Pokémon to damage them.;No effect.
+Last Resort;normal;physical;140;0;1;0;0;[];[];This move can be used only after the user has used all the other moves it knows in the battle.;No effect.
+Lava Plume;fire;special;80;0;0;0;0;[];[];The user torches everything around it in an inferno of scarlet flames. This may also leave those it hits with a burn.;May induce burn.
+Leaf Blade;grass;physical;90;0;1;0;0;[];[];The user handles a sharp leaf like a sword and attacks by cutting its target. Critical hits land more easily.;Has an increased Critical Hit ratio
+Leaf Storm;grass;special;130;0;0;0;0;[];[];The user whips up a storm of leaves around the target. The attack's recoil harshly lowers the user's Sp. Atk stat.;Lowers user's Special Attack two stages.
+Leaf Tornado;grass;special;65;0;0;0;0;[];[];The user attacks its target by encircling it in sharp leaves. This attack may also lower the target's accuracy.;May lower opponent's Accuracy one stage.
+Leafage;grass;physical;40;0;0;0;0;[];[];The user attacks by pelting the target with leaves.;No effect.
+Leech Life;bug;physical;80;0;1;0;0;[];[];The user drains the target's blood. The user's HP is restored by half the damage taken by the target.;User recovers half the damage inflicted.
+Lick;ghost;physical;30;0;1;0;0;[];[];The target is licked with a long tongue, causing damage. This may also leave the target with paralysis.;May induce paralysis.
+Liquidation;water;physical;85;0;1;0;0;[];[];The user slams into the target using a full-force blast of water. This may also lower the target's Defense stat.;May lower opponent's Defense one stage.
+Low Kick;fighting;physical;1;0;1;0;0;[];[];A powerful low kick that makes the target fall over. The heavier the target, the greater the move's power.;[DEPTH]Damage inflicted raises the heavier the opponent is.
+Low Sweep;fighting;physical;65;0;1;0;0;[];[];The user makes a swift attack on the target's legs, which lowers the target's Speed stat.;Lowers opponent's Speed one stage.
+Lunge;bug;physical;80;0;1;0;0;[];[];The user makes a lunge at the target, attacking with full force. This also lowers the target's Attack stat.;Lowers opponent's Attack one stage.
+Luster Purge;psychic;special;70;0;0;0;0;[];[];The user lets loose a damaging burst of light. This may also lower the target's Sp. Def stat.;May lower opponent's Special Defense one stage.
+Mach Punch;fighting;physical;40;1;1;0;1;[];[];The user throws a punch at blinding speed. This move always goes first.;Has increased Speed Priority
+Magical Leaf;grass;special;60;0;0;0;0;[];[];The user scatters curious leaves that chase the target. This attack never misses.;Cannot miss.
+Magma Storm;fire;special;100;0;0;0;0;[];[];The target becomes trapped within a maelstrom of fire that rages for four to five turns.;Traps opponent.
+Magnet Bomb;steel;physical;60;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Cannot miss.
+Magnitude;ground;physical;1;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;10/30/50/70/90/110/150.
+Mega Drain;grass;special;40;0;0;0;0;[];[];A nutrient-draining attack. The user's HP is restored by half the damage taken by the target.;User recovers half the damage inflicted.
+Mega Kick;normal;physical;120;0;1;0;0;[];[];The target is attacked by a kick launched with muscle-packed power.;No effect.
+Mega Punch;normal;physical;80;0;1;0;1;[];[];The target is slugged by a punch thrown with muscle-packed power.;No effect.
+Megahorn;bug;physical;120;0;1;0;0;[];[];Using its tough and impressive horn, the user rams into the target with no letup.;No effect.
+Metal Burst;steel;physical;1;0;0;0;0;[];[];The user retaliates with much greater force against the opponent that last inflicted damage on it.;Damages the last Pokémon to hit the user with 150% of the damage inflicted on the user
+Metal Claw;steel;physical;50;0;1;0;0;[];[];The target is raked with steel claws. This may also raise the user's Attack stat.;May raise user's Attack one stage.
+Meteor Assault;fighting;physical;150;0;0;0;0;[];[];The user attacks wildly with its thick leek. The user can't move on the next turn, because the force of this move makes it stagger.;User cannot Attack on the next turn.
+Meteor Mash;steel;physical;90;0;1;0;1;[];[];The target is hit with a hard punch fired like a meteor. This may also raise the user's Attack stat.;May raise user's Attack one stage.
+Mind Blown;fire;special;150;0;0;0;0;[];[];The user attacks everything around it by causing its own head to explode. This also damages the user.;User loses half their Maximum Hit Points. This effect is ignored by Magic Guard.
+Mirror Coat;psychic;special;1;-5;0;0;0;[];[];A retaliation move that counters any special attack, inflicting double the damage taken.;Counters the foe's special Attack at double the power.
+Mirror Shot;steel;special;65;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;May lower opponent's Accuracy one stage.
+Mist Ball;psychic;special;70;0;0;0;0;[];[];A mist-like flurry of down envelops and damages the target. This may also lower the target's Sp. Atk stat.;May lower opponent's Special Attack one stage.
+Moonblast;fairy;special;95;0;0;0;0;[];[];Borrowing the power of the moon, the user attacks the target. This may also lower the target's Sp. Atk stat.;May lower opponent's Special Attack one stage.
+Moongeist Beam;ghost;special;100;0;0;0;0;[];[];The user emits a sinister ray to attack the target. This move can be used on the target regardless of its Abilities.;Ignores abilities
+Mud Bomb;ground;special;65;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;May lower opponent's Accuracy one stage.
+Mud Shot;ground;special;55;0;0;0;0;[];[];The user attacks by hurling a blob of mud at the target. This also lowers the target's Speed stat.;May lower opponent's Speed one stage.
+Mud-Slap;ground;special;20;0;0;0;0;[];[];The user hurls mud in the target's face to inflict damage and lower its accuracy.;May lower opponent's Accuracy one stage.
+Muddy Water;water;special;90;0;0;0;0;[];[];The user attacks by shooting muddy water at opposing Pokémon. This may also lower their accuracy.;May lower opponent's Accuracy one stage.
+Multi-Attack;normal;physical;120;0;1;0;0;[];[];Cloaking itself in high energy, the user slams into the target. The memory held determines the move's type.;Changes the type of the move based upon the item being held
+Mystical Fire;fire;special;75;0;0;0;0;[];[];The user attacks by breathing a special, hot fire. This also lowers the target's Sp. Atk stat.;May lower opponent's Special Attack one stage.
+Natural Gift;normal;physical;1;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;[DEPTH]Changes type and power based on hold item
+Natures Madness;fairy;special;1;0;0;0;0;[];[];The user hits the target with the force of nature. It halves the target's HP.;Cuts the opponent's Hit Points by 50% of the current value
+Needle Arm;grass;physical;60;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;May cause opponent to flinch.
+Night Daze;dark;special;85;0;0;0;0;[];[];The user lets loose a pitch-black shock wave at its target. This may also lower the target's accuracy.;May lower opponent's Accuracy one stage.
+Night Shade;ghost;special;1;0;0;0;0;[];[];The user makes the target see a frightening mirage. It inflicts damage equal to the user's level.;Inflicts damage equal to the user's level.
+Night Slash;dark;physical;70;0;1;0;0;[];[];The user slashes the target the instant an opportunity arises. Critical hits land more easily.;Has an increased Critical Hit ratio
+Nuzzle;electric;physical;20;0;1;0;0;[];[];The user attacks by nuzzling its electrified cheeks against the target. This also leaves the target with paralysis.;Inflicts Paralysis
+Oblivion Wing;flying;special;80;0;0;0;0;[];[];The user absorbs its target's HP. The user's HP is restored by over half of the damage taken by the target.;User recovers 75% the damage inflicted.
+Octazooka;water;special;65;0;0;0;0;[];[];The user attacks by spraying ink in the target's face or eyes. This may also lower the target's accuracy.;May lower opponent's Accuracy one stage.
+Ominous Wind;ghost;special;60;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;May raise all user's stats one stage.
+Origin Pulse;water;special;110;0;0;0;0;[];[];The user attacks opposing Pokémon with countless beams of light that glow a deep and brilliant blue.;No effect.
+Outrage;dragon;physical;120;0;1;0;0;[];[];The user rampages and attacks for two to three turns. The user then becomes confused.;User uses the same Attack for 2-3 turns then becomes confused.
+Overdrive;electric;special;80;0;0;1;0;[];[];The user attacks opposing Pokémon by twanging a guitar or bass guitar, causing a huge echo and strong vibration.;No effect.
+Overheat;fire;special;130;0;0;0;0;[];[];The user attacks the target at full power. The attack's recoil harshly lowers the user's Sp. Atk stat.;Lowers user's Special Attack two stages.
+Parabolic Charge;electric;special;65;0;0;0;0;[];[];The user attacks everything around it. The user's HP is restored by half the damage taken by those hit.;User recovers half the damage inflicted.
+Pay Day;normal;physical;40;0;0;0;0;[];[];Numerous coins are hurled at the target to inflict damage. Money is earned after the battle.;User gains money after battle in the main game.
+Payback;dark;physical;50;0;1;0;0;[];[];The user stores power, then attacks. If the user moves after the target, this attack's power will be doubled.;Doubles damage if user moves after target
+Peck;flying;physical;35;0;1;0;0;[];[];The target is jabbed with a sharply pointed beak or horn.;No effect.
+Petal Blizzard;grass;physical;90;0;0;0;0;[];[];The user stirs up a violent petal blizzard and attacks everything around it.;No effect.
+Petal Dance;grass;special;120;0;1;0;0;[];[];The user attacks the target by scattering petals for two to three turns. The user then becomes confused.;User uses the same Attack for 2-3 turns then becomes confused.
+Phantom Force;ghost;physical;90;0;1;0;0;[];[];The user vanishes somewhere, then strikes the target on the next turn. This move hits even if the target protects itself.;The user is protected the first turn, Attacks the second turn. Hits through Protect
+Photon Geyser;psychic;special;100;0;0;0;0;[];[];The user attacks a target with a pillar of light. This move inflicts Attack or Sp. Atk damage—whichever stat is higher for the user.;Damage inflicted depends on user's Attack or Special Attack. Highest stat used to determine if move is Physical or Special. Ignores abilities
+Pin Missile;bug;physical;25;0;0;0;0;[];[];Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row.;Attacks 2-5 times in a row. 37.5% chance of 2 hits. 37.5% chance of 3 hits. 12.5% chance of 4 hits. 12.5% chance of 5 hits
+Plasma Fists;electric;physical;100;0;1;0;0;[];[];The user attacks with electrically charged fists. This move changes Normal-type moves to Electric-type moves.;Changes target's Normal-type move to Electric-type.
+Play Rough;fairy;physical;90;0;1;0;0;[];[];The user plays rough with the target and attacks it. This may also lower the target's Attack stat.;May lower opponent's Attack one stage.
+Pluck;flying;physical;60;0;1;0;0;[];[];The user pecks the target. If the target is holding a Berry, the user eats it and gains its effect.;Removes target's Berry and uses its effect
+Poison Fang;poison;physical;50;0;1;0;0;[];[];The user bites the target with toxic fangs. This may also leave the target badly poisoned.;May induce severe poison.
+Poison Jab;poison;physical;80;0;1;0;0;[];[];The target is stabbed with a tentacle, arm, or the like steeped in poison. This may also poison the target.;May induce poison.
+Poison Sting;poison;physical;15;0;0;0;0;[];[];The user stabs the target with a poisonous stinger. This may also poison the target.;May induce poison.
+Poison Tail;poison;physical;50;0;1;0;0;[];[];The user hits the target with its tail. This may also poison the target. Critical hits land more easily.;Has high critical hit ratio. May induce poison.
+Pollen Puff;bug;special;90;0;0;0;0;[];[];The user attacks the enemy with a pollen puff that explodes. If the target is an ally, it gives the ally a pollen puff that restores its HP instead.;Heals if used on an ally.
+Pound;normal;physical;40;0;1;0;0;[];[];The target is physically pounded with a long tail, a foreleg, or the like.;No effect.
+Powder Snow;ice;special;40;0;0;0;0;[];[];The user attacks with a chilling gust of powdery snow. This may also freeze opposing Pokémon.;May induce freeze.
+Power Gem;rock;special;80;0;0;0;0;[];[];The user attacks with a ray of light that sparkles as if it were made of gemstones.;No effect.
+Power Trip;dark;physical;20;0;1;0;0;[];[];The user boasts its strength and attacks the target. The more the user's stats are raised, the greater the move's power.;Increases damage by 100% for each stage a stat has been increased by the user
+Power Whip;grass;physical;120;0;1;0;0;[];[];The user violently whirls its vines, tentacles, or the like to harshly lash the target.;No effect.
+Power-Up Punch;fighting;physical;40;0;1;0;1;[];[];Striking opponents over and over makes the user's fists harder. Hitting a target raises the Attack stat.;Raises user's Attack by one stage
+Precipice Blades;ground;physical;120;0;0;0;0;[];[];The user attacks opposing Pokémon by manifesting the power of the land in fearsome blades of stone.;No effect.
+Present;normal;physical;1;0;0;0;0;[];[];The user attacks by giving the target a gift with a hidden trap. It restores HP sometimes, however.;May hit or heal the user or the opponent.
+Prismatic Laser;psychic;special;160;0;0;0;0;[];[];The user shoots powerful lasers using the power of a prism. The user can't move on the next turn.;User cannot Attack on the next turn.
+Psybeam;psychic;special;65;0;0;0;0;[];[];The target is attacked with a peculiar ray. This may also leave the target confused.;May induce Confusion
+Psychic;psychic;special;90;0;0;0;0;[];[];The target is hit by a strong telekinetic force. This may also lower the target's Sp. Def stat.;May lower opponent's Special Defense one stage.
+Psychic Fangs;psychic;physical;85;0;1;0;0;[];[];The user bites the target with its psychic capabilities. This can also destroy Light Screen and Reflect.;[DEPTH]Destroys protective barriers.
+Psycho Boost;psychic;special;140;0;0;0;0;[];[];The user attacks the target at full power. The attack's recoil harshly lowers the user's Sp. Atk stat.;Lowers user's Special Attack two stages.
+Psycho Cut;psychic;physical;70;0;0;0;0;[];[];The user tears at the target with blades formed by psychic power. Critical hits land more easily.;Has an increased Critical Hit ratio
+Psyshock;psychic;special;80;0;0;0;0;[];[];The user materializes an odd psychic wave to attack the target. This attack does physical damage.;Inflicts physical damage
+Psystrike;psychic;special;100;0;0;0;0;[];[];The user materializes an odd psychic wave to attack the target. This attack does physical damage.;Inflicts physical damage
+Psywave;psychic;special;1;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Inflicts damage equal to 0.5 to 1.5 x  user's level.
+Punishment;dark;physical;1;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;[DEPTH]Increases damage inflicted based on the opponent's stat boosts
+Pursuit;dark;physical;40;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Inflicts double damage if the opponent is switching out.
+Pyro Ball;fire;physical;120;0;0;0;0;[];[];The user attacks by igniting a small stone and launching it as a fiery ball at the target. This may also leave the target with a burn.;May induce burn.
+Quick Attack;normal;physical;40;1;1;0;0;[];[];The user lunges at the target at a speed that makes it almost invisible. This move always goes first.;Has increased Speed Priority
+Rage;normal;physical;20;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;User's Attack raises one stage if hit.
+Rapid Spin;normal;physical;50;0;1;0;0;[];[];A spin attack that can also eliminate such moves as Bind, Wrap, and Leech Seed. This also raises the user's Speed stat.;User removes trapping moves. Increased Speed by 1 stage.
+Razor Leaf;grass;physical;55;0;0;0;0;[];[];Sharp-edged leaves are launched to slash at opposing Pokémon. Critical hits land more easily.;Has an increased Critical Hit ratio
+Razor Shell;water;physical;75;0;1;0;0;[];[];The user cuts its target with sharp shells. This may also lower the target's Defense stat.;May lower opponent's Defense one stage.
+Razor Wind;normal;special;80;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Has an increased Critical Hit ratio
+Retaliate;normal;physical;70;0;1;0;0;[];[];The user gets revenge for a fainted ally. If an ally fainted in the previous turn, this move's power is increased.;If a team-mate has been knocked out in the turn before this Pokémon moves, the power is increased by 100%.
+Return;normal;physical;1;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;[DEPTH]The happier the user, the stronger the Attack.
+Revelation Dance;normal;special;90;0;0;0;0;[];[];The user attacks the target by dancing very hard. The user's type determines the type of this move.;Type varies based on form
+Revenge;fighting;physical;60;-4;1;0;0;[];[];This attack move's power is doubled if the user has been hurt by the opponent in the same turn.;Power doubles if user was hit before using the Attack.
+Reversal;fighting;physical;1;0;1;0;0;[];[];An all-out attack that becomes more powerful the less HP the user has.;Inflicts more damage when the user's HP is down.
+Roar of Time;dragon;special;150;0;0;0;0;[];[];The user blasts the target with power that distorts even time. The user can't move on the next turn.;User cannot Attack on the next turn.
+Rock Blast;rock;physical;25;0;0;0;0;[];[];The user hurls hard rocks at the target. Two to five rocks are launched in a row.;Attacks 2-5 times in a row. 37.5% chance of 2 hits. 37.5% chance of 3 hits. 12.5% chance of 4 hits. 12.5% chance of 5 hits
+Rock Climb;normal;physical;90;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;May induce Confusion
+Rock Slide;rock;physical;75;0;0;0;0;[];[];Large boulders are hurled at opposing Pokémon to inflict damage. This may also make the opposing Pokémon flinch.;May cause opponent to flinch.
+Rock Smash;fighting;physical;40;0;1;0;0;[];[];The user attacks with a punch. This may also lower the target's Defense stat.;May lower opponent's Defense one stage.
+Rock Throw;rock;physical;50;0;0;0;0;[];[];The user picks up and throws a small rock at the target to attack.;No effect.
+Rock Tomb;rock;physical;60;0;0;0;0;[];[];Boulders are hurled at the target. This also lowers the target's Speed stat by preventing its movement.;May lower opponent's Speed one stage.
+Rock Wrecker;rock;physical;150;0;0;0;0;[];[];The user launches a huge boulder at the target to attack. The user can't move on the next turn.;User cannot Attack on the next turn.
+Rolling Kick;fighting;physical;60;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;May cause opponent to flinch.
+Rollout;rock;physical;30;0;1;0;0;[];[];The user continually rolls into the target over five turns. It becomes more powerful each time it hits.;"Uses the same move for 5 turns; move's power raises if it hits."
+Round;normal;special;60;0;0;1;0;[];[];The user attacks the target with a song. Others can join in the Round to increase the power of the attack.;[DEPTH]Increases power if other Pokémon used Round this turn
+Sacred Fire;fire;physical;100;0;0;0;0;[];[];The target is razed with a mystical fire of great intensity. This may also leave the target with a burn.;May induce burn.
+Sacred Sword;fighting;physical;90;0;1;0;0;[];[];The user attacks by slicing with a long horn. The target's stat changes don't affect this attack's damage.;Ignores stat changes
+Sand Tomb;ground;physical;35;0;0;0;0;[];[];The user traps the target inside a harshly raging sandstorm for four to five turns.;Traps opponent.
+Scald;water;special;80;0;0;0;0;[];[];The user shoots boiling hot water at its target. This may also leave the target with a burn.;May induce burn.
+Scratch;normal;physical;40;0;1;0;0;[];[];Hard, pointed, sharp claws rake the target to inflict damage.;No effect.
+Searing Shot;fire;special;100;0;0;0;0;[];[];The user torches everything around it in an inferno of scarlet flames. This may also leave those it hits with a burn.;May induce burn.
+Secret Power;normal;physical;70;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;[DEPTH]Afflicts a status condition based on the field
+Seed Bomb;grass;physical;80;0;0;0;0;[];[];The user slams a barrage of hard-shelled seeds down on the target from above.;No effect.
+Seed Flare;grass;special;120;0;0;0;0;[];[];The user emits a shock wave from its body to attack its target. This may also harshly lower the target's Sp. Def stat.;Lowers opponent's Special Defense two stages.
+Seismic Toss;fighting;physical;1;0;1;0;0;[];[];The target is thrown using the power of gravity. It inflicts damage equal to the user's level.;Inflicts damage equal to the user's level.
+Self-Destruct;normal;physical;200;0;0;0;0;[];[];The user attacks everything around it by causing an explosion. The user faints upon using this move.;User faints
+Shadow Ball;ghost;special;80;0;0;0;0;[];[];The user hurls a shadowy blob at the target. This may also lower the target's Sp. Def stat.;May lower opponent's Special Defense one stage.
+Shadow Bone;ghost;physical;85;0;0;0;0;[];[];The user attacks by beating the target with a bone that contains a spirit. This may also lower the target's Defense stat.;May lower opponent's Defense one stage.
+Shadow Claw;ghost;physical;70;0;1;0;0;[];[];The user slashes with a sharp claw made from shadows. Critical hits land more easily.;Has an increased Critical Hit ratio
+Shadow Force;ghost;physical;120;0;1;0;0;[];[];The user disappears, then strikes the target on the next turn. This move hits even if the target protects itself.;The user is protected the first turn, Attacks the second turn. Hits through Protect
+Shadow Punch;ghost;physical;60;0;1;0;1;[];[];The user throws a punch from the shadows. This attack never misses.;Cannot miss.
+Shadow Sneak;ghost;physical;40;1;1;0;0;[];[];The user extends its shadow and attacks the target from behind. This move always goes first.;Has increased Speed Priority
+Sheer Cold;ice;special;1;0;0;0;0;[];[];The target faints instantly. It's less likely to hit the target if it's used by Pokémon other than Ice types.;[DEPTH]May cause one-hit KO.
+Shell Trap;fire;special;150;-3;0;0;0;[];[];The user sets a shell trap. If the user is hit by a physical move, the trap will explode and inflict damage on opposing Pokémon.;If user is hit by a physical Attack after using this move, damage is inflicted
+Shock Wave;electric;special;60;0;0;0;0;[];[];The user strikes the target with a quick jolt of electricity. This attack never misses.;Cannot miss.
+Signal Beam;bug;special;75;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;May induce Confusion
+Silver Wind;bug;special;60;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;May raise all user's stats one stage.
+Sketch;normal;other;0;0;0;0;0;[];[];It enables the user to permanently learn the move last used by the target. Once used, Sketch disappears.;Copies the opponent's last move forever.
+Skull Bash;normal;physical;130;0;1;0;0;[];[];The user tucks in its head to raise its Defense stat on the first turn, then rams the target on the next turn.;Raises user's Defense one stage and Attacks next turn.
+Sky Attack;flying;physical;140;0;0;0;0;[];[];A second-turn attack move where critical hits land more easily. This may also make the target flinch.;May cause opponent to flinch.
+Sky Drop;flying;physical;60;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;[DEPTH]Rises to the sky and prevents the target Pokémon from using a move in the next turn.
+Sky Uppercut;fighting;physical;85;0;1;0;1;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Hits opponents using Fly
+Slam;normal;physical;80;0;1;0;0;[];[];The target is slammed with a long tail, vines, or the like to inflict damage.;No effect.
+Slash;normal;physical;70;0;1;0;0;[];[];The target is attacked with a slash of claws or blades. Critical hits land more easily.;Has an increased Critical Hit ratio
+Sludge;poison;special;65;0;0;0;0;[];[];Unsanitary sludge is hurled at the target. This may also poison the target.;May induce poison.
+Sludge Bomb;poison;special;90;0;0;0;0;[];[];Unsanitary sludge is hurled at the target. This may also poison the target.;May induce poison.
+Sludge Wave;poison;special;95;0;0;0;0;[];[];The user strikes everything around it by swamping the area with a giant sludge wave. This may also poison those hit.;May induce poison.
+Smack Down;rock;physical;50;0;0;0;0;[];[];The user throws a stone or similar projectile to attack the target. A flying Pokémon will fall to the ground when it's hit.;[DEPTH]Removes target's Ground-type resistance. Damages Pokémon using Fly & Bounce and cancels the move. Damages Pokémon using Sky Drop
+Smelling Salts;normal;physical;70;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Doubles damage when targed is afflicted with Paralysis. Heals opponent's Paralysis
+Smog;poison;special;30;0;0;0;0;[];[];The target is attacked with a discharge of filthy gases. This may also poison the target.;May induce poison.
+Snap Trap;grass;physical;35;0;1;0;0;[];[];The user snares the target in a snap trap for four to five turns.;Traps opponent.
+Snarl;dark;special;55;0;0;1;0;[];[];The user yells as if it's ranting about something, which lowers the Sp. Atk stats of opposing Pokémon.;May lower opponent's Special Attack one stage.
+Snipe Shot;water;special;80;0;0;0;0;[];[];The user ignores the effects of opposing Pokémon's moves and Abilities that draw in moves, allowing this move to hit the chosen target.;Ignores move redirection from abilities and moves
+Snore;normal;special;50;0;0;1;0;[];[];This attack can be used only if the user is asleep. The harsh noise may also make the target flinch.;Can only be used while asleep.
+Solar Beam;grass;special;120;0;0;0;0;[];[];In this two-turn attack, the user gathers light, then blasts a bundled beam on the next turn.;Charges for the first turn, damages on the second. If Sunny Day is in effect, the charge and attack is in the same turn.
+Solar Blade;grass;physical;125;0;1;0;0;[];[];In this two-turn attack, the user gathers light and fills a blade with the light's energy, attacking the target on the next turn.;Charges for the first turn, damages on the second. If Sunny Day is in effect, the charge and attack is in the same turn.
+Sonic Boom;normal;special;1;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Inflicts 20 HP damage.
+Spacial Rend;dragon;special;100;0;0;0;0;[];[];The user tears the target along with the space around it. Critical hits land more easily.;Has an increased Critical Hit ratio
+Spark;electric;physical;65;0;1;0;0;[];[];The user throws an electrically charged tackle at the target. This may also leave the target with paralysis.;May induce paralysis.
+Sparkling Aria;water;special;90;0;0;1;0;[];[];The user bursts into song, emitting many bubbles. Any Pokémon suffering from a burn will be healed by the touch of these bubbles.;Heals the target from Burn
+Spectral Thief;ghost;physical;90;0;1;0;0;[];[];The user hides in the target's shadow, steals the target's stat boosts, and then attacks.;[DEPTH]Steals opponent's stat boosts before doing damage
+Spike Cannon;normal;physical;20;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Attacks 2-5 times in a row. 37.5% chance of 2 hits. 37.5% chance of 3 hits. 12.5% chance of 4 hits. 12.5% chance of 5 hits
+Spirit Break;fairy;physical;75;0;1;0;0;[];[];The user attacks the target with so much force that it could break the target's spirit. This also lowers the target's Sp. Atk stat.;Lowers opponent's Sp. Atk one stage
+Spirit Shackle;ghost;physical;80;0;0;0;0;[];[];The user attacks while simultaneously stitching the target's shadow to the ground to prevent the target from escaping.;Prevents opponent from switching
+Spit Up;normal;special;1;0;0;0;0;[];[];The power stored using the move Stockpile is released at once in an attack. The more power is stored, the greater the move's power.;[DEPTH]Releases power from STOCKPILE.
+Steam Eruption;water;special;110;0;0;0;0;[];[];The user immerses the target in superheated steam. This may also leave the target with a burn.;May induce burn.
+Steamroller;bug;physical;65;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;May cause opponent to flinch.
+Steel Wing;steel;physical;70;0;1;0;0;[];[];The target is hit with wings of steel. This may also raise the user's Defense stat.;May raise user's Defense one stage.
+Stomp;normal;physical;65;0;1;0;0;[];[];The target is stomped with a big foot. This may also make the target flinch.;May cause opponent to flinch.
+Stomping Tantrum;ground;physical;75;0;1;0;0;[];[];Driven by frustration, the user attacks the target. If the user's previous move has failed, the power of this move doubles.;Doubles damage if last move failed
+Stone Edge;rock;physical;100;0;0;0;0;[];[];The user stabs the target from below with sharpened stones. Critical hits land more easily.;Has an increased Critical Hit ratio
+Stored Power;psychic;special;20;0;0;0;0;[];[];The user attacks the target with stored power. The more the user's stats are raised, the greater the move's power.;[DEPTH]Increases damage by 100% for each stage a stat has been increased by the user
+Storm Throw;fighting;physical;60;0;1;0;0;[];[];The user strikes the target with a fierce blow. This attack always results in a critical hit.;Always inflicts a Critical Hit
+Strange Steam;fairy;special;90;0;0;0;0;[];[];The user attacks the target by emitting steam. This may also confuse the target.;May induce Confusion
+Strength;normal;physical;80;0;1;0;0;[];[];The target is slugged with a punch thrown at maximum power.;No effect.
+Struggle Bug;bug;special;50;0;0;0;0;[];[];While resisting, the user attacks opposing Pokémon. This lowers the Sp. Atk stats of those hit.;May lower opponent's Special Attack one stage.
+Submission;fighting;physical;80;0;1;0;0;[];[];The user grabs the target and recklessly dives for the ground. This also damages the user a little.;User takes recoil damage equal to 25% of the damage inflicted.
+Sucker Punch;dark;physical;70;1;1;0;0;[];[];This move enables the user to attack first. This move fails if the target is not readying an attack.;Damages the opponent only if they are intending to use a damaging move. Fails if used after the opponent moves.
+Sunsteel Strike;steel;physical;100;0;1;0;0;[];[];The user slams into the target with the force of a meteor. This move can be used on the target regardless of its Abilities.;Ignores abilities
+Super Fang;normal;physical;1;0;1;0;0;[];[];The user chomps hard on the target with its sharp front fangs. This cuts the target's HP in half.;Cuts the opponent's Hit Points by 50% of the current value
+Superpower;fighting;physical;120;0;1;0;0;[];[];The user attacks the target with great power. However, this also lowers the user's Attack and Defense stats.;Lowers user's Attack and Defense one stage.
+Surf;water;special;90;0;0;0;0;[];[];The user attacks everything around it by swamping its surroundings with a giant wave.;May damage diving opponents
+Swift;normal;special;60;0;0;0;0;[];[];Star-shaped rays are shot at opposing Pokémon. This attack never misses.;Cannot miss.
+Synchronoise;psychic;special;120;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Only damages Pokémon of the same type as the user.
+Tackle;normal;physical;40;0;1;0;0;[];[];A physical attack in which the user charges and slams into the target with its whole body.;No effect.
+Tail Slap;normal;physical;25;0;1;0;0;[];[];The user attacks by striking the target with its hard tail. It hits the target two to five times in a row.;Attacks 2-5 times in a row. 37.5% chance of 2 hits. 37.5% chance of 3 hits. 12.5% chance of 4 hits. 12.5% chance of 5 hits
+Take Down;normal;physical;90;0;1;0;0;[];[];A reckless, full-body charge attack for slamming into the target. This also damages the user a little.;User takes recoil damage equal to 25% of the damage inflicted.
+Techno Blast;normal;special;120;0;0;0;0;[];[];The user fires a beam of light at its target. The move's type changes depending on the Drive the user holds.;Changes the type of the move based upon the item being held
+Thief;dark;physical;60;0;1;0;0;[];[];The user attacks and steals the target's held item simultaneously. The user can't steal anything if it already holds an item.;May steal opponent's item (temporarily in trainer battles).
+Thousand Arrows;ground;physical;90;0;0;0;0;[];[];This move also hits opposing Pokémon that are in the air. Those Pokémon are knocked down to the ground.;Ignores Ground-type Resistance. Knocks Flying/Levitating Pokémon to the ground.
+Thrash;normal;physical;120;0;1;0;0;[];[];The user rampages and attacks for two to three turns. The user then becomes confused.;User uses the same Attack for 2-3 turns then becomes confused.
+Throat Chop;dark;physical;80;0;1;0;0;[];[];The user attacks the target's throat, and the resultant suffering prevents the target from using moves that emit sound for two turns.;Prevents target from using Sound moves for 2 turns
+Thunder;electric;special;110;0;0;0;0;[];[];A wicked thunderbolt is dropped on the target to inflict damage. This may also leave the target with paralysis.;[DEPTH]May induce Paralysis.  Damages Pokémon using Fly, Bounce or Sky Drop
+Thunder Fang;electric;physical;65;0;1;0;0;[];[];The user bites with electrified fangs. This may also make the target flinch or leave it with paralysis.;May PARALYZE opponent or cause opponent to flinch.
+Thunder Punch;electric;physical;75;0;1;0;1;[];[];The target is punched with an electrified fist. This may also leave the target with paralysis.;May induce paralysis.
+Thunder Shock;electric;special;40;0;0;0;0;[];[];A jolt of electricity crashes down on the target to inflict damage. This may also leave the target with paralysis.;May induce paralysis.
+Thunderbolt;electric;special;90;0;0;0;0;[];[];A strong electric blast crashes down on the target. This may also leave the target with paralysis.;May induce paralysis.
+Transform;normal;other;0;0;0;0;0;[];[];The user transforms into a copy of the target right down to having the same move set.;[DEPTH]User transforms to the opponent.
+Tri Attack;normal;special;80;0;0;0;0;[];[];The user strikes with a simultaneous three-beam attack. This may also burn, freeze, or paralyze the target.;May induce burn, freeze or paralysis.
+Triple Kick;fighting;physical;10;0;1;0;0;[];[];A consecutive three-kick attack that becomes more powerful with each successful hit.;Attacks 1-3 times in a row.
+Trop Kick;grass;physical;70;0;1;0;0;[];[];The user lands an intense kick of tropical origins on the target. This also lowers the target's Attack stat.;Lowers opponent's Attack one stage.
+Trump Card;normal;special;1;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;[DEPTH]Increases power the lower its PP
+Twineedle;bug;physical;25;0;0;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Attacks twice. May induce poison.
+Twister;dragon;special;40;0;0;0;0;[];[];The user whips up a vicious tornado to tear at opposing Pokémon. This may also make them flinch.;May cause opponent to flinch. Damage is doubled if opponent is using Fly.
+U-turn;bug;physical;70;0;1;0;0;[];[];After making its attack, the user rushes back to switch places with a party Pokémon in waiting.;Pokémon switches out from battle
+Uproar;normal;special;90;0;0;1;0;[];[];The user attacks in an uproar for three turns. During that time, no Pokémon can fall asleep.;Hits for 3 turns. No Pokémon can be Asleep during that time.
+Vacuum Wave;fighting;special;40;1;0;0;0;[];[];The user whirls its fists to send a wave of pure vacuum at the target. This move always goes first.;Has increased Speed Priority
+Venoshock;poison;special;65;0;0;0;0;[];[];The user drenches the target in a special poisonous liquid. This move's power is doubled if the target is poisoned.;Doubles damage inflicted if target is Poisoned
+Vise Grip;normal;physical;55;0;1;0;0;[];[];The target is gripped and squeezed from both sides to inflict damage.;No effect.
+Vine Whip;grass;physical;45;0;1;0;0;[];[];The target is struck with slender, whiplike vines to inflict damage.;No effect.
+Vital Throw;fighting;physical;70;-1;1;0;0;[];[];The user attacks last. In return, this throw move never misses.;Cannot miss. Goes last.
+Volt Switch;electric;special;70;0;0;0;0;[];[];After making its attack, the user rushes back to switch places with a party Pokémon in waiting.;Pokémon switches out from battle
+Wake-Up Slap;fighting;physical;70;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;Heals the target from Sleep
+Water Gun;water;special;40;0;0;0;0;[];[];The target is blasted with a forceful shot of water.;No effect.
+Water Pulse;water;special;60;0;0;0;0;[];[];The user attacks the target with a pulsing blast of water. This may also confuse the target.;May induce Confusion
+Water Shuriken;water;special;15;1;0;0;0;[];[];The user hits the target with throwing stars two to five times in a row. This move always goes first.;Attacks 2-5 times in a row. 37.5% chance of 2 hits. 37.5% chance of 3 hits. 12.5% chance of 4 hits. 12.5% chance of 5 hitsBase Power increased to 20 if Battle Bond has activated and will hit 3 times guaranteed.
+Water Spout;water;special;150;0;0;0;0;[];[];The user spouts water to damage opposing Pokémon. The lower the user's HP, the lower the move's power.;[DEPTH]Inflicts more damage when the user's HP is high.
+Waterfall;water;physical;80;0;1;0;0;[];[];The user charges at the target and may make it flinch.;May cause opponent to flinch.
+Weather Ball;normal;special;50;0;0;0;0;[];[];This attack move varies in power and type depending on the weather.;Changes type and doubles power based on the weather in play
+Whirlpool;water;special;35;0;0;0;0;[];[];The user traps the target in a violent swirling whirlpool for four to five turns.;Traps the opponent for 4 to 5 turns
+Wild Charge;electric;physical;90;0;1;0;0;[];[];The user shrouds itself in electricity and smashes into its target. This also damages the user a little.;User takes recoil damage equal to 25% of the damage inflicted.
+Wing Attack;flying;physical;60;0;1;0;0;[];[];The target is struck with large, imposing wings spread wide to inflict damage.;No effect.
+Wood Hammer;grass;physical;120;0;1;0;0;[];[];The user slams its rugged body into the target to attack. This also damages the user quite a lot.;User takes recoil damage equal to a third of the damage inflicted.
+Wrap;normal;physical;15;0;1;0;0;[];[];A long body, vines, or the like are used to wrap and squeeze the target for four to five turns.;Traps opponent.
+Wring Out;normal;special;1;0;1;0;0;[];[];This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered.;[DEPTH]Increases damage the higher the target's Hit Points
+X-Scissor;bug;physical;80;0;1;0;0;[];[];The user slashes at the target by crossing its scythes or claws as if they were a pair of scissors.;No effect.
+Zap Cannon;electric;special;120;0;0;0;0;[];[];The user fires an electric blast like a cannon to inflict damage and cause paralysis.;May induce paralysis.
+Zen Headbutt;psychic;physical;80;0;1;0;0;[];[];The user focuses its willpower to its head and attacks the target. This may also make the target flinch.;May cause opponent to flinch.
+Zing Zap;electric;physical;80;0;1;0;0;[];[];A strong electric blast crashes down on the target, giving it an electric shock. This may also make the target flinch.;May cause opponent to flinch.

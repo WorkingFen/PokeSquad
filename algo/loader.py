@@ -8,19 +8,19 @@ from model import Type
 
 def load_pokemons():
     pokemon_list = []
-    lines = open('data/pokemon.csv').readlines()
+    lines = open('../data/pokemon.csv').readlines()
     for line in lines[1:]:
         attr = line.split(';')
         damage = {}
-        variant = attr[1] if len(attr[1]) > 0 else None
+        variant = attr[1].upper() if len(attr[1]) > 0 else None
         name = attr[2].upper()
-        abilities = attr[9][1:][:-1].replace('\'', '').split(',')
+        abilities = ast.literal_eval(attr[9])
         abilities = [a.upper() for a in abilities]
         for t in Type:
-            damage[t] = float(attr[int(t) + 10])
+            damage[t] = float(attr[int(t) + 10].replace(',', '.'))
         type1 = attr[29].upper()
         type2 = attr[30].upper()
-        moves = attr[37][1:][:-1].replace('\'', '').split(',')
+        moves = ast.literal_eval(attr[37])
         moves = [m.upper() for m in moves]
         """
             hp = attr[3]
@@ -43,7 +43,7 @@ def load_pokemons():
 
 def load_moves():
     move_list = []
-    lines = open('data/move.csv').readlines()
+    lines = open('../data/move.csv').readlines()
     for line in lines[1:]:
         attr = line.split(';')
         name = attr[0].upper()
@@ -66,7 +66,7 @@ def load_moves():
 
 def load_abilities():
     ability_list = []
-    lines = open('data/ability.csv').readlines()
+    lines = open('../data/ability.csv').readlines()
     for line in lines[1:]:
         attr = line.split(';')
         name = attr[0].upper()

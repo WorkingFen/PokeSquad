@@ -1,4 +1,5 @@
 import random
+import copy
 
 from model import Pokemon
 from model import WeatherCondition
@@ -35,12 +36,14 @@ def tournament(teams: list):
 
 
 def pokemon_battle(friend: Pokemon, foe: Pokemon):
-    tmp_friend = friend
-    tmp_foe = foe
+    tmp_friend = copy.deepcopy(friend)
+    tmp_foe = copy.deepcopy(foe)
     tmp_friend.hp = (3 * friend.hp) + 15    # HP = 3 * 'hp' + 15
     tmp_foe.hp = (3 * foe.hp) + 15
     # Abilities here?
     while tmp_friend.hp > 0 and tmp_foe.hp > 0:
+        # friend_move = random.sample(tmp_friend.moves, k=1)
+        # foes_move = random.sample(tmp_foe.moves, k=1)
         if tmp_friend.speed >= tmp_foe.speed:
             tmp_foe.hp -= max(tmp_friend.attack - tmp_foe.defense, 0)   # Damage = ((2 * 'power' * (A/D))/25 + 2) * Mod
             if tmp_foe.hp <= 0:
