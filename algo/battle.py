@@ -44,6 +44,9 @@ def pokemon_battle(friend: Pokemon, foe: Pokemon):
     while tmp_friend.hp > 0 and tmp_foe.hp > 0:
         # friend_move = random.sample(tmp_friend.moves, k=1)
         # foes_move = random.sample(tmp_foe.moves, k=1)
+        if tmp_friend.attack <= tmp_foe.defense and tmp_foe.attack <= tmp_friend.defense:
+            tmp_foe.hp = -1
+            break
         if tmp_friend.speed >= tmp_foe.speed:
             tmp_foe.hp -= max(tmp_friend.attack - tmp_foe.defense, 0)   # Damage = ((2 * 'power' * (A/D))/25 + 2) * Mod
             if tmp_foe.hp <= 0:
