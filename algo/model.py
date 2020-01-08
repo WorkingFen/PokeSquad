@@ -1,12 +1,13 @@
+import copy
 from enum import IntEnum
 from random import choices
 from random import sample
+
 from aenum import Enum, NoAlias
-import copy
 
 
 class Pokemon(object):
-    moves_count = 4
+    max_moves_count = 4
 
     def __init__(self, variant, name, hp, attack, defense, sp_attack, sp_defense,
                  speed, abilities: list, damage_multi: dict, type1, type2, occurrence: float, moves: list):
@@ -24,7 +25,7 @@ class Pokemon(object):
         self.type1 = type1
         self.type2 = type2
         self.occurrence = occurrence
-        self.moves = sample(moves, k=min(len(moves), Pokemon.moves_count))
+        self.moves = sample(moves, k=min(len(moves), Pokemon.max_moves_count))
         self.faint = False
 
     def mutate(self, pokemons):
@@ -32,8 +33,10 @@ class Pokemon(object):
         mutations = choices([0, 1, 2, 3, 4, 5], [0.05, 0.45, 0.35, 0.1, 0.04, 0.01])[0]
         if mutations == 5:
             return choices(pokemons, [p.occurrence for p in pokemons], k=1)[0]
-        left = max(Pokemon.moves_count - mutations, 0)
-        mutant.moves = sample(self.moves, k=left) + (sample(self.__available_moves__, k=mutations))
+        left = max(Pokemon.max_moves_count - mutations, 0)
+        left_moves = sample(self.moves, k=min(left, len(self.moves)))
+        new_moves = sample(self.__available_moves__, k=min(mutations, len(self.__available_moves__)))
+        mutant.moves = left_moves + new_moves
         return mutant
 
 
