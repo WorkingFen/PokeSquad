@@ -28,6 +28,3 @@ def mutate(offspring: list):
             mutated_team.append(pokemon.mutate())
         mutants.append(frozenset(mutated_team))
     return mutants
-
-
-evolve()
