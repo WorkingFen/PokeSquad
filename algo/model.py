@@ -30,11 +30,11 @@ class Pokemon(object):
         self.moves = sample(moves, k=min(len(moves), Pokemon.max_moves_count))
         self.faint = False
 
-    def mutate(self, pokemons):
+    def mutate(self):
         mutant = copy.copy(self)
         mutations = choices([0, 1, 2, 3, 4, 5], params.mutation_probability)[0]
         if mutations == 5:
-            return choices(pokemons, [p.occurrence for p in pokemons], k=1)[0]
+            return choices(params.all_pokemons, [p.occurrence for p in params.all_pokemons], k=1)[0]
         left = max(Pokemon.max_moves_count - mutations, 0)
         left_moves = sample(self.moves, k=min(left, len(self.moves)))
         new_moves = sample(self.__available_moves__, k=min(mutations, len(self.__available_moves__)))

@@ -1,15 +1,16 @@
 import random
 
+import battle
 import parameters as params
 
 
 def evolve():
     population = init_population(params.all_pokemons, params.population_size)
     while True:
-        selected = params.selection(population)
-        offspring = params.crossover(selected)
+        sorted_population = battle.tournament(population)
+        offspring = params.crossover(sorted_population)
         offspring = mutate(offspring)
-        population = params.succession(selected, offspring)
+        population = params.succession(sorted_population, offspring)
 
 
 def init_population(pokemons: list, size: int):
@@ -24,7 +25,7 @@ def mutate(offspring: list):
     for team in offspring:
         mutated_team = []
         for pokemon in team:
-            mutated_team.append(pokemon.mutate(params.all_pokemons))
+            mutated_team.append(pokemon.mutate())
         mutants.append(frozenset(mutated_team))
     return mutants
 

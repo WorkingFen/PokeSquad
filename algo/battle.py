@@ -16,12 +16,11 @@ def tournament(teams: list):
                 scores[player_team] = scores.get(player_team, 0) + 1
             else:
                 scores[opponent_team] = scores.get(opponent_team, 0) + 1
-    sorted_teams = sorted(scores.items(), key=lambda p: -p[1])
+    sorted_teams = sorted(scores.items(), key=lambda p: -params.reward(sum([x.attack + x.defense for x in p[0]])))
     data = []
     for team, score in sorted_teams:
         data.append(sum([x.attack + x.defense for x in team]))
     mean = statistics.mean(data)
-    sorted(data)
     print(f'size: {len(teams)} mean: {mean}, best: {sum([x.attack + x.defense for x in sorted_teams[0][0]])}')
     return sorted_teams
 
@@ -37,22 +36,7 @@ def team_battle(team1: list, team2: list):
     # return random.choices([team1, team2], k=1)[0]
     team1_sum = sum([x.attack + x.defense for x in team1])
     team2_sum = sum([x.attack + x.defense for x in team2])
-    team1_dist = 99999999
-    team2_dist = 99999999
-    team1_closest = team2_closest = params.optima[0]
-    for optimum in params.optima:
-        if team1_dist > abs(team1_sum - optimum):
-            team1_closest = optimum
-            team1_dist = abs(team1_sum - optimum)
-        if team2_dist > abs(team2_sum - optimum):
-            team2_closest = optimum
-            team2_dist = abs(team2_sum - optimum)
-    if team1_closest > team2_closest:
-        return team1
-    elif team1_closest < team2_closest:
-        return team2
-    else:
-        return team1 if team1_dist < team2_dist else team2
+    return team1 if params.reward(team1_sum) > params.reward(team2_sum) else team2
 
 
 '''

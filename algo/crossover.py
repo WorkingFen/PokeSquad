@@ -8,20 +8,20 @@ def list2pairs(l: list):
     return list(zip(it, it))
 
 
-def prepare_pairs(selected: list):
-    shuffled_copy = selected[:]
-    random.shuffle(selected[:])
-    return list2pairs(shuffled_copy)
-
-
-def half_split(selected: list):
+def prepare_pairs(sorted_population: list):
+    pairs = []
     offspring = []
-    pairs = prepare_pairs(selected)
+    while len(pairs) + len(offspring) < len(sorted_population):
+        if random.random() < params.crossover_probability:
+            pairs.append(tuple(params.selection(sorted_population, 2)))
+        else:
+            offspring.append(params.selection(sorted_population, 1)[0])
+    return pairs, offspring
+
+
+def half_split(population: list):
+    pairs, offspring = prepare_pairs(population)
     for dad, mom in pairs:
-        if random.random() >= params.crossover_probability:
-            offspring.append(dad)
-            offspring.append(mom)
-            continue
         if random.random() < 0.5:
             offspring.append(frozenset(dad[:params.team_size / 2] + mom[params.team_size / 2:]))
         else:
@@ -29,19 +29,14 @@ def half_split(selected: list):
     return offspring
 
 
-def mixed(selected: list):
-    offspring = []
-    pairs = prepare_pairs(selected)
+def mixed(sorted_population: list):
+    pairs, offspring = prepare_pairs(sorted_population)
     for dad, mom in pairs:
-        if random.random() >= params.crossover_probability:
-            offspring.append(dad)
-            offspring.append(mom)
-            continue
         child = set()
-        pokemons = list(dad) + list(mom)
-        while len(child) < params.team_size:
-            for poke in pokemons:
-                if poke not in child and random.random() < 0.5:
-                    child.add(poke)
+        for dads, moms in zip(dad, mom):
+            if random.random() < 0.5:
+                child.add(dads)
+            else:
+                child.add(moms)
         offspring.append(frozenset(child))
     return offspring
