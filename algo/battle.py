@@ -44,17 +44,15 @@ def tournament(teams: list):
 
 
 def pokemon_battle(friend: Pokemon, foe: Pokemon):
-    tmp_friend = copy.deepcopy(friend)
-    tmp_foe = copy.deepcopy(foe)
-    tmp_friend.hp = (3 * friend.hp) + 15    # HP = 3 * 'hp' + 15
-    tmp_foe.hp = (3 * foe.hp) + 15
+    friend_hp = (3 * friend.hp) + 15    # HP = 3 * 'hp' + 15
+    foe_hp = (3 * foe.hp) + 15
     # Abilities here?
-    tmp_friend_move = best_move(tmp_friend.moves, tmp_foe)
-    tmp_foe_move = best_move(tmp_foe.moves, tmp_friend)
-    tmp_friend_damage = max(get_damage(tmp_friend_move, tmp_friend, tmp_foe), 0.01)
-    tmp_foe_damage = max(get_damage(tmp_foe_move, tmp_foe, tmp_friend), 0.01)
+    friend_move = best_move(friend.moves, foe)
+    foe_move = best_move(foe.moves, friend)
+    friend_damage = max(get_damage(friend_move, friend, foe), 0.01)
+    foe_damage = max(get_damage(foe_move, foe, friend), 0.01)
 
-    if tmp_friend.hp/tmp_foe_damage >= tmp_foe.hp/tmp_friend_damage:
+    if friend_hp/foe_damage >= foe_hp/friend_damage:
         foe.faint = True
     else:
         friend.faint = True
@@ -87,8 +85,12 @@ def team_battle(player_team: list, opponent_team: list):
     while len(player_pokemons) > 0 and len(opponent_pokemons) > 0:
         player_pokemon = best_pokemon(player_pokemons, opponent_pokemons[0])
         pokemon_battle(player_pokemon, opponent_pokemons[0])
-        player_pokemons = [x for x in player_team if not x.faint]
-        opponent_pokemons = [x for x in opponent_team if not x.faint]
+        if player_pokemon.faint:
+            player_pokemons.remove(player_pokemon)
+        else:
+            opponent_pokemons.remove(opponent_pokemons[0])
+        # player_pokemons = [x for x in player_team if not x.faint]
+        # opponent_pokemons = [x for x in opponent_team if not x.faint]
     revive_team(player_team)
     revive_team(opponent_team)
     if len(player_pokemons) > 0:
