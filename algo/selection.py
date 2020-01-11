@@ -12,4 +12,3 @@ def roulette(sorted_population: list, k=1):
 def ranked(sorted_population: list, k=1):
     population = [x[0] for x in sorted_population[:params.ranked_limit]]
     return random.choices(population, k=k)
-

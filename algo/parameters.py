@@ -5,9 +5,9 @@ import selection
 
 # constants
 team_size = 6
-all_pokemons = ldr.load_pokemons()
 all_moves = ldr.load_moves()
-all_abilities = ldr.load_abilities()
+all_pokemons = ldr.load_pokemons()
+# all_abilities = ldr.load_abilities()
 
 # parameters
 population_size = 400

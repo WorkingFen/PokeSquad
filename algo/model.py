@@ -11,8 +11,10 @@ import parameters as params
 class Pokemon(object):
     max_moves_count = 4
 
+    '''def __init__(self, variant, name, hp, attack, defense, sp_attack, sp_defense,
+                 speed, abilities: list, damage_multi: dict, type1, type2, occurrence: float, moves: list):'''
     def __init__(self, variant, name, hp, attack, defense, sp_attack, sp_defense,
-                 speed, abilities: list, damage_multi: dict, type1, type2, occurrence: float, moves: list):
+                 speed, damage_multi: dict, type1, type2, occurrence: float, moves: list):
         self.__available_moves__ = moves
         self.variant = variant
         self.name = name
@@ -22,7 +24,7 @@ class Pokemon(object):
         self.sp_attack = int(sp_attack)
         self.sp_defense = int(sp_defense)
         self.speed = int(speed)
-        self.abilities = abilities
+        # self.abilities = abilities
         self.damage_multi = damage_multi
         self.type1 = type1
         self.type2 = type2
@@ -44,18 +46,18 @@ class Pokemon(object):
 
 class Move(object):
 
-    def __init__(self, name, type, category, power, priority, contact,
-                 sound_type, punch_type, effects: list, sec_effects: list):
+    def __init__(self, name, type, category, power):  # , priority, contact,
+        # sound_type, punch_type, effects: list, sec_effects: list):
         self.name = name
         self.type = type
         self.category = category
         self.power = int(power)
-        self.priority = int(priority)
-        self.contact = bool(int(contact))
-        self.sound_type = bool(int(sound_type))
-        self.punch_type = bool(int(punch_type))
-        self.effects = effects
-        self.sec_effects = sec_effects
+        # self.priority = int(priority)
+        # self.contact = bool(int(contact))
+        # self.sound_type = bool(int(sound_type))
+        # self.punch_type = bool(int(punch_type))
+        # self.effects = effects
+        # self.sec_effects = sec_effects
 
 
 class Ability(object):
@@ -92,6 +94,7 @@ class Type(IntEnum):
     FAIRY = 17
 
 
+'''
 class WeatherCondition(Enum, settings=NoAlias):
     CLEAR = 0.3
     SUN = 0.175
@@ -109,3 +112,4 @@ class WeatherCondition(Enum, settings=NoAlias):
     def draw():
         conditions = [x for x in WeatherCondition if x.value > 0]
         return choices(conditions, [x.value for x in conditions])[0]
+'''

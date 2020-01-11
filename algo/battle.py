@@ -3,6 +3,9 @@ import statistics
 
 import parameters as params
 from model import Pokemon
+from model import Category
+from model import Move
+from model import Type
 
 '''
 def pokemon_battle(friend: Pokemon, foe: Pokemon):
@@ -46,7 +49,17 @@ def pokemon_battle(friend: Pokemon, foe: Pokemon):
     tmp_friend.hp = (3 * friend.hp) + 15    # HP = 3 * 'hp' + 15
     tmp_foe.hp = (3 * foe.hp) + 15
     # Abilities here?
-    while tmp_friend.hp > 0 and tmp_foe.hp > 0:
+    tmp_friend_move = best_move(tmp_friend.moves, tmp_foe)
+    tmp_foe_move = best_move(tmp_foe.moves, tmp_friend)
+    tmp_friend_damage = max(get_damage(tmp_friend_move, tmp_friend, tmp_foe), 0.01)
+    tmp_foe_damage = max(get_damage(tmp_foe_move, tmp_foe, tmp_friend), 0.01)
+
+    if tmp_friend.hp/tmp_foe_damage >= tmp_foe.hp/tmp_friend_damage:
+        foe.faint = True
+    else:
+        friend.faint = True
+
+    '''while tmp_friend.hp > 0 and tmp_foe.hp > 0:
         # friend_move = random.sample(tmp_friend.moves, k=1)
         # foes_move = random.sample(tmp_foe.moves, k=1)
         if tmp_friend.attack <= tmp_foe.defense and tmp_foe.attack <= tmp_friend.defense:
@@ -65,14 +78,15 @@ def pokemon_battle(friend: Pokemon, foe: Pokemon):
     if tmp_friend.hp <= 0:
         friend.faint = True
     if tmp_foe.hp <= 0:
-        foe.faint = True
+        foe.faint = True'''
 
 
 def team_battle(player_team: list, opponent_team: list):
     player_pokemons = [x for x in player_team if not x.faint]
     opponent_pokemons = [x for x in opponent_team if not x.faint]
     while len(player_pokemons) > 0 and len(opponent_pokemons) > 0:
-        pokemon_battle(player_pokemons[0], opponent_pokemons[0])
+        player_pokemon = best_pokemon(player_pokemons, opponent_pokemons[0])
+        pokemon_battle(player_pokemon, opponent_pokemons[0])
         player_pokemons = [x for x in player_team if not x.faint]
         opponent_pokemons = [x for x in opponent_team if not x.faint]
     revive_team(player_team)
@@ -88,3 +102,35 @@ def revive_team(team: list):
         x.faint = False
 
 
+def best_pokemon(team: list, foe: Pokemon):
+    best = team[0]
+    best_value = 4
+    for pokemon in team:
+        value = pokemon.damage_multi[Type[foe.type1]]
+        if foe.type2:
+            value += pokemon.damage_multi[Type[foe.type2]]
+            value /= 2
+        if best_value > value:
+            best = pokemon
+            best_value = value
+
+    return best
+
+
+def best_move(moves: list, pok: Pokemon):
+    best = moves[0]
+    best_value = 0
+    for move in moves:
+        value = move.power * pok.damage_multi[Type[move.type]]
+        if best_value < value:
+            best = move
+            best_value = value
+
+    return best
+
+
+def get_damage(move: Move, friend: Pokemon, foe: Pokemon):
+    if move.category is Category.SPECIAL:
+        return ((2 * move.power * (friend.sp_attack / foe.sp_defense) / 25) + 2) * foe.damage_multi[Type[move.type]]
+    else:
+        return ((2 * move.power * (friend.attack / foe.defense) / 25) + 2) * foe.damage_multi[Type[move.type]]

@@ -1,8 +1,9 @@
 import ast
 
+import parameters as params
 from model import Pokemon
 from model import Move
-from model import Ability
+# from model import Ability
 from model import Type
 
 
@@ -14,14 +15,15 @@ def load_pokemons():
         damage = {}
         variant = attr[1].upper() if len(attr[1]) > 0 else None
         name = attr[2].upper()
-        abilities = ast.literal_eval(attr[9])
-        abilities = [a.upper() for a in abilities]
+        # abilities = ast.literal_eval(attr[9])
+        # abilities = [a.upper() for a in abilities]
         for t in Type:
             damage[t] = float(attr[int(t) + 10].replace(',', '.'))
         type1 = attr[29].upper()
         type2 = attr[30].upper()
-        moves = ast.literal_eval(attr[37])
-        moves = [m.upper() for m in moves]
+        moves_names = ast.literal_eval(attr[37])
+        moves_names = [m.upper() for m in moves_names]
+        moves = [x for x in params.all_moves if x.name in moves_names]
         """
             hp = attr[3]
             attack = attr[4]
@@ -33,7 +35,8 @@ def load_pokemons():
         """
         pokemon_list.append(
             Pokemon(variant, name, attr[3], attr[4], attr[5], attr[6], attr[7], attr[8],
-                    abilities, damage, type1, type2, float(attr[36]), moves)
+                    # abilities,
+                    damage, type1, type2, float(attr[36]), moves)
         )
     total_occurrence = sum([p.occurrence for p in pokemon_list])
     for p in pokemon_list:
@@ -49,8 +52,8 @@ def load_moves():
         name = attr[0].upper()
         type = attr[1].upper()
         category = attr[2].upper()
-        effects = ast.literal_eval(attr[8])
-        sec_effects = ast.literal_eval(attr[9])
+        # effects = ast.literal_eval(attr[8])
+        # sec_effects = ast.literal_eval(attr[9])
         """
             power = attr[3]
             priority = attr[4]
@@ -59,11 +62,13 @@ def load_moves():
             punch_type = attr[7]
         """
         move_list.append(
-            Move(name, type, category, attr[3], attr[4], attr[5], attr[6], attr[7], effects, sec_effects)
+            Move(name, type, category, attr[3])
+            # , attr[4], attr[5], attr[6], attr[7], effects, sec_effects)
         )
     return move_list
 
 
+'''
 def load_abilities():
     ability_list = []
     lines = open('../data/ability.csv').readlines()
@@ -73,3 +78,4 @@ def load_abilities():
         effects = ast.literal_eval(attr[1])
         ability_list.append(Ability(name, effects))
     return ability_list
+'''
