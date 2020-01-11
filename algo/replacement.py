@@ -1,7 +1,7 @@
 import parameters as params
 
 
-def generative(offspring: list):
+def generative(population: list, offspring: list):
     return offspring
 
 

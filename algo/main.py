@@ -1,18 +1,15 @@
 import random
 
-import crossover
 import parameters as params
-import replacement
-import selection
 
 
 def evolve():
     population = init_population(params.all_pokemons, params.population_size)
     while True:
-        selected = selection.ranked(population)
-        offspring = crossover.mixed(selected)
+        selected = params.selection(population)
+        offspring = params.crossover(selected)
         offspring = mutate(offspring)
-        population = replacement.elite(selected, offspring)
+        population = params.succession(selected, offspring)
 
 
 def init_population(pokemons: list, size: int):

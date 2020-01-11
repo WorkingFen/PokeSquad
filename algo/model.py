@@ -5,6 +5,8 @@ from random import sample
 
 from aenum import Enum, NoAlias
 
+import parameters as params
+
 
 class Pokemon(object):
     max_moves_count = 4
@@ -30,7 +32,7 @@ class Pokemon(object):
 
     def mutate(self, pokemons):
         mutant = copy.copy(self)
-        mutations = choices([0, 1, 2, 3, 4, 5], [0.05, 0.45, 0.35, 0.1, 0.04, 0.01])[0]
+        mutations = choices([0, 1, 2, 3, 4, 5], params.mutation_probability)[0]
         if mutations == 5:
             return choices(pokemons, [p.occurrence for p in pokemons], k=1)[0]
         left = max(Pokemon.max_moves_count - mutations, 0)
