@@ -3,11 +3,6 @@ import random
 import parameters as params
 
 
-def list2pairs(l: list):
-    it = iter(l)
-    return list(zip(it, it))
-
-
 def prepare_pairs(sorted_population: list):
     pairs = []
     offspring = []

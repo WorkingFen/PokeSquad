@@ -1,8 +1,23 @@
-import random
+import copy
 import statistics
 
 import parameters as params
 from model import Pokemon
+
+'''
+def pokemon_battle(friend: Pokemon, foe: Pokemon):
+    # TODO implement
+    # weather = WeatherCondition.draw()
+    return random.choices([friend, foe], k=1)[0]
+
+
+def team_battle(team1: list, team2: list):
+    # TODO implement
+    # return random.choices([team1, team2], k=1)[0]
+    team1_sum = sum([x.attack + x.defense for x in team1])
+    team2_sum = sum([x.attack + x.defense for x in team2])
+    return team1 if params.reward(team1_sum) > params.reward(team2_sum) else team2
+'''
 
 
 def tournament(teams: list):
@@ -25,21 +40,6 @@ def tournament(teams: list):
     return sorted_teams
 
 
-def pokemon_battle(friend: Pokemon, foe: Pokemon):
-    # TODO implement
-    # weather = WeatherCondition.draw()
-    return random.choices([friend, foe], k=1)[0]
-
-
-def team_battle(team1: list, team2: list):
-    # TODO implement
-    # return random.choices([team1, team2], k=1)[0]
-    team1_sum = sum([x.attack + x.defense for x in team1])
-    team2_sum = sum([x.attack + x.defense for x in team2])
-    return team1 if params.reward(team1_sum) > params.reward(team2_sum) else team2
-
-
-'''
 def pokemon_battle(friend: Pokemon, foe: Pokemon):
     tmp_friend = copy.deepcopy(friend)
     tmp_foe = copy.deepcopy(foe)
@@ -87,5 +87,4 @@ def revive_team(team: list):
     for x in team:
         x.faint = False
 
-'''
 

@@ -2,6 +2,7 @@ import parameters as params
 
 
 def generative(sorted_population: list, offspring: list):
+    # sorted population for argument consistency
     return offspring
 
 
