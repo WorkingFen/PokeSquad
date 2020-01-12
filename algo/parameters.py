@@ -2,6 +2,7 @@ import crossover
 import loader as ldr
 import replacement
 import selection
+import battle
 
 # constants
 team_size = 6
@@ -18,3 +19,6 @@ selection = selection.ranked
 crossover = crossover.mixed
 succession = replacement.elite
 
+# battles
+tournament = battle.all_v_all
+pokemon = battle.first_pokemon

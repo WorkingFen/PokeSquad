@@ -1,5 +1,6 @@
 import random
 import statistics as stat
+import parameters as params
 
 from logger import logger
 from model import Category
@@ -10,7 +11,7 @@ from model import Type
 
 
 def tournament(teams: list):
-    all_v_all(teams)
+    params.tournament(teams)
     sorted_teams = sorted(teams, key=lambda p: -p.score())
     scores = [x.score() for x in teams]
     logger.info(
@@ -56,7 +57,7 @@ def team_battle(player_team: Team, opponent_team: Team):
     player_pokemons = list(player_team.pokemons.copy())
     opponent_pokemons = list(opponent_team.pokemons.copy())
     while len(player_pokemons) > 0 and len(opponent_pokemons) > 0:
-        player_pokemon = first_pokemon(player_pokemons, opponent_pokemons[0])
+        player_pokemon = params.pokemon(player_pokemons, opponent_pokemons[0])
         pokemon_battle(player_pokemon, opponent_pokemons[0])
         if player_pokemon.faint:
             player_pokemons.remove(player_pokemon)
