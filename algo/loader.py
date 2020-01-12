@@ -1,9 +1,7 @@
 import ast
 
+import model
 from logger import logger
-from model import Move
-from model import Pokemon
-from model import Type
 
 
 def load_pokemons():
@@ -16,7 +14,7 @@ def load_pokemons():
         damage = {}
         variant = attr[1].upper() if len(attr[1]) > 0 else None
         name = attr[2].upper()
-        for t in Type:
+        for t in model.Type:
             damage[t] = float(attr[int(t) + 10].replace(',', '.'))
         type1 = attr[29].upper()
         type2 = attr[30].upper()
@@ -24,7 +22,7 @@ def load_pokemons():
         moves_names = [m.upper() for m in moves_names]
         moves = [x for x in all_moves if x.name in moves_names]
         pokemon_list.append(
-            Pokemon(variant, name, attr[3], attr[4], attr[5], attr[6], attr[7], attr[8],
+            model.Pokemon(variant, name, attr[3], attr[4], attr[5], attr[6], attr[7], attr[8],
                     damage, type1, type2, float(attr[36]), moves)
         )
     total_occurrence = sum([p.occurrence for p in pokemon_list])
@@ -43,6 +41,6 @@ def load_moves():
         name = attr[0].upper()
         type = attr[1].upper()
         category = attr[2].upper()
-        move_list.append(Move(name, type, category, attr[3]))
+        move_list.append(model.Move(name, type, category, attr[3]))
     logger.info('moves loaded')
     return move_list
