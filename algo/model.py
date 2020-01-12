@@ -30,7 +30,7 @@ class Pokemon(object):
 
     def mutate(self, all_pokemons):
         mutant = copy.copy(self)
-        mutations = choices([0, 1, 2, 3, 4, 5], [0.05, 0.1, 0.35, 0.01, 0.04, 0.45])[0]
+        mutations = choices([0, 1, 2, 3, 4, 5], [0.05, 0.45, 0.35, 0.01, 0.04, 0.1])[0]
         if mutations == 5:
             return choices(all_pokemons, [p.occurrence for p in all_pokemons], k=1)[0]
         left = max(Pokemon.max_moves_count - mutations, 0)
