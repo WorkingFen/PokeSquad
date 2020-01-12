@@ -1,5 +1,6 @@
 import ast
 
+from logger import logger
 from model import Move
 from model import Pokemon
 from model import Type
@@ -7,6 +8,8 @@ from model import Type
 
 def load_pokemons():
     pokemon_list = []
+    all_moves = load_moves()
+    logger.info('loading pokemons')
     lines = open('../data/pokemon.csv').readlines()
     for line in lines[1:]:
         attr = line.split(';')
@@ -19,7 +22,6 @@ def load_pokemons():
         type2 = attr[30].upper()
         moves_names = ast.literal_eval(attr[37])
         moves_names = [m.upper() for m in moves_names]
-        all_moves = load_moves()
         moves = [x for x in all_moves if x.name in moves_names]
         pokemon_list.append(
             Pokemon(variant, name, attr[3], attr[4], attr[5], attr[6], attr[7], attr[8],
@@ -28,11 +30,13 @@ def load_pokemons():
     total_occurrence = sum([p.occurrence for p in pokemon_list])
     for p in pokemon_list:
         p.occurrence = p.occurrence / total_occurrence
+    logger.info('pokemons loaded')
     return pokemon_list
 
 
 def load_moves():
     move_list = []
+    logger.info('loading moves')
     lines = open('../data/move.csv').readlines()
     for line in lines[1:]:
         attr = line.split(';')
@@ -40,4 +44,5 @@ def load_moves():
         type = attr[1].upper()
         category = attr[2].upper()
         move_list.append(Move(name, type, category, attr[3]))
+    logger.info('moves loaded')
     return move_list
