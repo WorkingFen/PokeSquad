@@ -54,8 +54,6 @@ population_size = 400
 ranked_limit = 100
 elite_limit = 10
 crossover_probability = 0.5
-tournament_type = all_v_all
-pokemon_selection = random_pokemon
 
 # evolution
 selection = selection.ranked
@@ -63,5 +61,5 @@ crossover = crossover.mixed
 succession = replacement.elite
 
 # battles
-tournament = all_v_all
-pokemon = first_pokemon
+tournament_type = all_v_all
+pokemon_selection = random_pokemon

@@ -28,12 +28,13 @@ class Pokemon(object):
 
     def mutate(self, all_pokemons):
         mutant = copy.copy(self)
-        mutations = choices([0, 1, 2, 3, 4, 5], [0.05, 0.45, 0.35, 0.01, 0.04, 0.1])[0]
+        mutations = choices([0, 1, 2, 3, 4, 5], [0.025, 0.1, 0.425, 0.375, 0.07, 0.005])[0]
         if mutations == 5:
             return choices(all_pokemons, [p.occurrence for p in all_pokemons], k=1)[0]
         left = max(Pokemon.max_moves_count - mutations, 0)
         left_moves = sample(self.moves, k=min(left, len(self.moves)))
-        new_moves = sample(self.__available_moves__, k=min(mutations, len(self.__available_moves__)))
+        other_moves = list(x for x in self.__available_moves__ if x not in left_moves)
+        new_moves = sample(other_moves, k=min(mutations, len(other_moves)))
         mutant.moves = left_moves + new_moves
         return mutant
 
