@@ -88,7 +88,7 @@ class Type(IntEnum):
 
 class Team(object):
 
-    def __init__(self, pokemons: frozenset, won=0, lost=0):
+    def __init__(self, pokemons: list, won=0, lost=0):
         assert len(pokemons) == 6
         self.pokemons = pokemons
         self.won_battles = won
@@ -107,5 +107,4 @@ class Team(object):
         mutants = []
         for pokemon in self.pokemons:
             mutants.append(pokemon.mutate(all_pokemons, prob))
-        assert len(mutants) == 6
-        return Team(frozenset(mutants), self.won_battles, self.lost_battles)
+        return Team(mutants, self.won_battles, self.lost_battles)
