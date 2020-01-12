@@ -22,7 +22,9 @@ def half_split(population: list):
             child = frozenset(dad.pokemons[:params.team_size / 2] + mom.pokemons[params.team_size / 2:])
         else:
             child = frozenset(dad.pokemons[params.team_size / 2:] + mom.pokemons[:params.team_size / 2])
-        offspring.append(Team(child))
+        won = int((dad.won_battles + mom.won_battles) / 2)
+        lost = int((dad.lost_battles + mom.lost_battles) / 2)
+        offspring.append(Team(child, won, lost))
     return offspring
 
 
@@ -35,5 +37,7 @@ def mixed(sorted_population: list):
                 child.add(dads)
             else:
                 child.add(moms)
-        offspring.append(Team(frozenset(child)))
+        won = int((dad.won_battles + mom.won_battles) / 2)
+        lost = int((dad.lost_battles + mom.lost_battles) / 2)
+        offspring.append(Team(frozenset(child), won, lost))
     return offspring

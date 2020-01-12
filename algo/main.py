@@ -2,18 +2,18 @@ import random
 
 import battle
 import parameters as params
-import multiprocessing
-import time
 from model import Team
 
 
 def evolve():
+    gen = 0
     population = init_population(params.all_pokemons, params.population_size)
-    while True:
+    while gen < 500:
         sorted_population = battle.tournament(population)
         offspring = params.crossover(sorted_population)
         offspring = mutate(offspring)
         population = params.succession(sorted_population, offspring)
+        gen += 1
 
 
 def init_population(pokemons: list, size: int):
@@ -30,9 +30,4 @@ def mutate(offspring: list):
     return mutants
 
 
-if __name__ == '__main__':
-    process = multiprocessing.Process(target=evolve, name="Evolve")
-    process.start()
-    time.sleep(120)
-    process.terminate()
-    process.join()
+evolve()
