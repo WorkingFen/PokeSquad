@@ -13,7 +13,13 @@ def tournament(teams: list):
                 continue
             team_battle(player_team, opponent_team)
     sorted_teams = sorted(teams, key=lambda p: -p.score())
-    logger.info(f'size: {len(teams)}, best: {sorted_teams[0].score()}, won: {sorted_teams[0].won_battles}, lost: {sorted_teams[0].lost_battles}')
+    logger.info(
+        f'size: {len(teams)}, '
+        f'best: {sorted_teams[0].score()}, '
+        f'won: {sorted_teams[0].won_battles}, '
+        f'lost: {sorted_teams[0].lost_battles}, '
+        f'diff: {sorted_teams[0].won_battles - sorted_teams[0].lost_battles}'
+    )
     return sorted_teams
 
 

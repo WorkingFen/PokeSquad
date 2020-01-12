@@ -16,5 +16,5 @@ crossover_probability = 0.5
 # evolution
 selection = selection.ranked
 crossover = crossover.mixed
-succession = replacement.elite
+succession = replacement.generative
 
