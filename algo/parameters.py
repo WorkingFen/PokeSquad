@@ -38,6 +38,3 @@ selection = selection.ranked
 crossover = crossover.mixed
 succession = replacement.elite
 
-# battles
-tournament = all_v_all
-pokemon = first_pokemon
