@@ -38,7 +38,8 @@ class Pokemon(object):
             return choices(all_pokemons, [p.occurrence for p in all_pokemons], k=1)[0]
         left = max(Pokemon.max_moves_count - mutations, 0)
         left_moves = sample(self.moves, k=min(left, len(self.moves)))
-        new_moves = sample(self.__available_moves__, k=min(mutations, len(self.__available_moves__)))
+        other_moves = list(x for x in self.__available_moves__ if x not in left_moves)
+        new_moves = sample(other_moves, k=min(mutations, len(other_moves)))
         mutant.moves = left_moves + new_moves
         return mutant
 
