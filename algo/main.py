@@ -12,7 +12,7 @@ from logger import logger
 def evolve():
     gen = 0
     population = init_population(params.all_pokemons, params.population_size)
-    while gen < 10:
+    while gen < 250:
         sorted_population = battle.tournament(population)
         offspring = params.crossover(sorted_population)
         offspring = mutate(offspring)
