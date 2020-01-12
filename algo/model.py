@@ -26,6 +26,11 @@ class Pokemon(object):
         self.moves = sample(moves, k=min(len(moves), Pokemon.max_moves_count))
         self.faint = False
 
+    def __repr__(self):
+        return f'variant: {self.variant}, ' \
+               f'name: {self.name}, ' \
+               f'moves: {self.moves}'
+
     def mutate(self, all_pokemons, prob):
         mutant = copy.copy(self)
         mutations = choices([0, 1, 2, 3, 4, 5], prob)[0]
@@ -45,6 +50,12 @@ class Move(object):
         self.type = type
         self.category = category
         self.power = int(power)
+
+    def __repr__(self):
+        return f'name: {self.name}, ' \
+               f'type: {self.type}, ' \
+               f'category: {self.category}, ' \
+               f'power: {self.power}'
 
 
 class Category(IntEnum):
@@ -82,7 +93,7 @@ class Team(object):
         self.won_battles = won
         self.lost_battles = lost
 
-    def __str__(self):
+    def __repr__(self):
         battles = self.won_battles + self.lost_battles
         score = self.won_battles / battles * (math.log(battles) + 1)
         return f'battles: {battles}, won: {self.won_battles}, lost: {self.lost_battles}, score: {score}'

@@ -20,9 +20,9 @@ def half_split(population: list):
     pairs, offspring = prepare_pairs(population)
     for dad, mom in pairs:
         if random.random() < 0.5:
-            child = frozenset(dad.pokemons[:team_size / 2] + mom.pokemons[team_size / 2:])
+            child = frozenset(list(dad.pokemons)[:int(team_size / 2)] + list(mom.pokemons)[int(team_size / 2):])
         else:
-            child = frozenset(dad.pokemons[team_size / 2:] + mom.pokemons[:team_size / 2])
+            child = frozenset(list(dad.pokemons)[int(team_size / 2):] + list(mom.pokemons)[:int(team_size / 2)])
         won = int((dad.won_battles + mom.won_battles) / 2)
         lost = int((dad.lost_battles + mom.lost_battles) / 2)
         offspring.append(model.Team(child, won, lost))

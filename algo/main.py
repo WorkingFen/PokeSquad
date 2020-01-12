@@ -6,17 +6,19 @@ import model
 import parameters as params
 import replacement
 import selection
+from logger import logger
 
 
 def evolve():
     gen = 0
     population = init_population(params.all_pokemons, params.population_size)
-    while gen < 500:
+    while gen < 10:
         sorted_population = battle.tournament(population)
         offspring = params.crossover(sorted_population)
         offspring = mutate(offspring)
         population = params.succession(sorted_population, offspring)
         gen += 1
+    return battle.tournament(population)
 
 
 def init_population(pokemons: list, size: int):
@@ -56,6 +58,16 @@ for sel in test_selection:
                         for t in test_tournaments:
                             for cross in test_cross:
                                 for succ in test_succ:
+                                    logger.info(f'starting test '
+                                                f'selection: {sel.__name__}, '
+                                                f'population: {pop}, '
+                                                f'elite: {el}, '
+                                                f'rank: {rank}, '
+                                                f'crossover prob: {c_prob}, '
+                                                f'mutation prob: {dist}, '
+                                                f'tournament: {(t[0].__name__, t[1].__name__)}, '
+                                                f'crossover: {cross.__name__}, '
+                                                f'succession: {succ.__name__}')
                                     params.selection = sel
                                     params.population_size = pop
                                     params.elite_limit = el
@@ -66,4 +78,5 @@ for sel in test_selection:
                                     params.pokemon_selection = t[1]
                                     params.crossover = cross
                                     params.succession = succ
-                                    evolve()
+                                    winner_population = evolve()
+                                    logger.info(f'{winner_population[0]}, pokemons: {winner_population[0].pokemons}')
