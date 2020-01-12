@@ -1,3 +1,4 @@
+from logger import logger
 from model import Category
 from model import Move
 from model import Pokemon
@@ -12,7 +13,7 @@ def tournament(teams: list):
                 continue
             team_battle(player_team, opponent_team)
     sorted_teams = sorted(teams, key=lambda p: -p.score())
-    print(f'size: {len(teams)}, best: {sorted_teams[0].score()}')
+    logger.info(f'size: {len(teams)}, best: {sorted_teams[0].score()}')
     return sorted_teams
 
 
