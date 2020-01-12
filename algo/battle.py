@@ -1,3 +1,6 @@
+import random
+import statistics as stat
+
 from logger import logger
 from model import Category
 from model import Move
@@ -7,20 +10,33 @@ from model import Type
 
 
 def tournament(teams: list):
-    for player_team in teams:
-        for opponent_team in teams:
-            if player_team is opponent_team:
-                continue
-            team_battle(player_team, opponent_team)
+    all_v_all(teams)
     sorted_teams = sorted(teams, key=lambda p: -p.score())
+    scores = [x.score() for x in teams]
     logger.info(
         f'size: {len(teams)}, '
+        f'mean: {stat.mean(scores)}, '
+        f'stddev: {stat.stdev(scores)}, '
         f'best: {sorted_teams[0].score()}, '
         f'won: {sorted_teams[0].won_battles}, '
         f'lost: {sorted_teams[0].lost_battles}, '
         f'diff: {sorted_teams[0].won_battles - sorted_teams[0].lost_battles}'
     )
     return sorted_teams
+
+
+def all_v_all(teams: list):
+    for i in range(len(teams)):
+        for j in range(i + 1, len(teams)):
+            team_battle(teams[i], teams[j])
+
+
+def all_v_all_twice(teams: list):
+    for player_team in teams:
+        for opponent_team in teams:
+            if player_team is opponent_team:
+                continue
+            team_battle(player_team, opponent_team)
 
 
 def pokemon_battle(friend: Pokemon, foe: Pokemon):
@@ -40,7 +56,7 @@ def team_battle(player_team: Team, opponent_team: Team):
     player_pokemons = list(player_team.pokemons.copy())
     opponent_pokemons = list(opponent_team.pokemons.copy())
     while len(player_pokemons) > 0 and len(opponent_pokemons) > 0:
-        player_pokemon = best_pokemon(player_pokemons, opponent_pokemons[0])
+        player_pokemon = first_pokemon(player_pokemons, opponent_pokemons[0])
         pokemon_battle(player_pokemon, opponent_pokemons[0])
         if player_pokemon.faint:
             player_pokemons.remove(player_pokemon)
@@ -72,6 +88,14 @@ def best_pokemon(team: list, foe: Pokemon):
             best_value = value
 
     return best
+
+
+def random_pokemon(team: list, *args):
+    return random.choices(team)[0]
+
+
+def first_pokemon(team: list, *args):
+    return team[0]
 
 
 def best_move(moves: list, pok: Pokemon):
