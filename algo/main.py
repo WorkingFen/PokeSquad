@@ -2,6 +2,8 @@ import random
 
 import battle
 import parameters as params
+import multiprocessing
+import time
 
 
 def evolve():
@@ -28,3 +30,11 @@ def mutate(offspring: list):
             mutated_team.append(pokemon.mutate())
         mutants.append(frozenset(mutated_team))
     return mutants
+
+
+if __name__ == '__main__':
+    process = multiprocessing.Process(target=evolve, name="Evolve")
+    process.start()
+    time.sleep(120)
+    process.terminate()
+    process.join()

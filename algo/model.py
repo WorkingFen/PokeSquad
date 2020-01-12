@@ -3,16 +3,12 @@ from enum import IntEnum
 from random import choices
 from random import sample
 
-from aenum import Enum, NoAlias
-
 import parameters as params
 
 
 class Pokemon(object):
     max_moves_count = 4
 
-    '''def __init__(self, variant, name, hp, attack, defense, sp_attack, sp_defense,
-                 speed, abilities: list, damage_multi: dict, type1, type2, occurrence: float, moves: list):'''
     def __init__(self, variant, name, hp, attack, defense, sp_attack, sp_defense,
                  speed, damage_multi: dict, type1, type2, occurrence: float, moves: list):
         self.__available_moves__ = moves
@@ -24,7 +20,6 @@ class Pokemon(object):
         self.sp_attack = int(sp_attack)
         self.sp_defense = int(sp_defense)
         self.speed = int(speed)
-        # self.abilities = abilities
         self.damage_multi = damage_multi
         self.type1 = type1
         self.type2 = type2
@@ -46,25 +41,11 @@ class Pokemon(object):
 
 class Move(object):
 
-    def __init__(self, name, type, category, power):  # , priority, contact,
-        # sound_type, punch_type, effects: list, sec_effects: list):
+    def __init__(self, name, type, category, power):
         self.name = name
         self.type = type
         self.category = category
         self.power = int(power)
-        # self.priority = int(priority)
-        # self.contact = bool(int(contact))
-        # self.sound_type = bool(int(sound_type))
-        # self.punch_type = bool(int(punch_type))
-        # self.effects = effects
-        # self.sec_effects = sec_effects
-
-
-class Ability(object):
-
-    def __init__(self, name, effects: list):
-        self.name = name
-        self.effects = effects
 
 
 class Category(IntEnum):
@@ -93,23 +74,3 @@ class Type(IntEnum):
     STEEL = 16
     FAIRY = 17
 
-
-'''
-class WeatherCondition(Enum, settings=NoAlias):
-    CLEAR = 0.3
-    SUN = 0.175
-    RAIN = 0.175
-    SANDSTORM = 0.125
-    HAIL = 0.125
-    FOG = 0.075
-    SHADOWY_AURA = 0.025
-
-    HEAVY_RAIN = 0
-    WIND = 0
-    EXTREME_SUN = 0
-
-    @staticmethod
-    def draw():
-        conditions = [x for x in WeatherCondition if x.value > 0]
-        return choices(conditions, [x.value for x in conditions])[0]
-'''
