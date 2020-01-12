@@ -38,7 +38,7 @@ def mutate(offspring: list):
 test_selection = [selection.ranked]
 test_population = [params.small_population, params.big_population]
 test_elite = [params.small_elite, params.big_elite]
-test_ranked = [params.big_ranked_limit]
+test_ranked = [params.small_ranked_limit, params.big_ranked_limit]
 test_cross_prob = [params.small_cross_prob, params.big_cross_prob]
 test_dists = [params.norm_dist, params.local_dist, params.global_dist]
 test_tournaments = [
