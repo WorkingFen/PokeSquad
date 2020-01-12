@@ -26,9 +26,9 @@ class Pokemon(object):
         self.moves = sample(moves, k=min(len(moves), Pokemon.max_moves_count))
         self.faint = False
 
-    def mutate(self, all_pokemons):
+    def mutate(self, all_pokemons, prob):
         mutant = copy.copy(self)
-        mutations = choices([0, 1, 2, 3, 4, 5], [0.05, 0.45, 0.35, 0.01, 0.04, 0.1])[0]
+        mutations = choices([0, 1, 2, 3, 4, 5], prob)[0]
         if mutations == 5:
             return choices(all_pokemons, [p.occurrence for p in all_pokemons], k=1)[0]
         left = max(Pokemon.max_moves_count - mutations, 0)
@@ -77,6 +77,7 @@ class Type(IntEnum):
 class Team(object):
 
     def __init__(self, pokemons: frozenset, won=0, lost=0):
+        assert len(pokemons) == 6
         self.pokemons = pokemons
         self.won_battles = won
         self.lost_battles = lost
@@ -90,8 +91,9 @@ class Team(object):
         battles = self.won_battles + self.lost_battles
         return self.won_battles / battles * (math.log(battles) + 1)
 
-    def mutate(self, all_pokemons):
+    def mutate(self, all_pokemons, prob):
         mutants = []
         for pokemon in self.pokemons:
-            mutants.append(pokemon.mutate(all_pokemons))
+            mutants.append(pokemon.mutate(all_pokemons, prob))
+        assert len(mutants) == 6
         return Team(frozenset(mutants), self.won_battles, self.lost_battles)
