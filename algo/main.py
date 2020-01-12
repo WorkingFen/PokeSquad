@@ -28,6 +28,3 @@ def mutate(offspring: list):
     for team in offspring:
         mutants.append(team.mutate(params.all_pokemons))
     return mutants
-
-
-evolve()

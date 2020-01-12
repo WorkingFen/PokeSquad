@@ -1,7 +1,6 @@
-import random
 import statistics as stat
-import parameters as params
 
+import parameters as params
 from logger import logger
 from model import Category
 from model import Move
@@ -11,7 +10,7 @@ from model import Type
 
 
 def tournament(teams: list):
-    params.tournament(teams)
+    params.tournament_type(teams, team_battle)
     sorted_teams = sorted(teams, key=lambda p: -p.score())
     scores = [x.score() for x in teams]
     logger.info(
@@ -24,20 +23,6 @@ def tournament(teams: list):
         f'diff: {sorted_teams[0].won_battles - sorted_teams[0].lost_battles}'
     )
     return sorted_teams
-
-
-def all_v_all(teams: list):
-    for i in range(len(teams)):
-        for j in range(i + 1, len(teams)):
-            team_battle(teams[i], teams[j])
-
-
-def all_v_all_twice(teams: list):
-    for player_team in teams:
-        for opponent_team in teams:
-            if player_team is opponent_team:
-                continue
-            team_battle(player_team, opponent_team)
 
 
 def pokemon_battle(friend: Pokemon, foe: Pokemon):
@@ -57,7 +42,7 @@ def team_battle(player_team: Team, opponent_team: Team):
     player_pokemons = list(player_team.pokemons.copy())
     opponent_pokemons = list(opponent_team.pokemons.copy())
     while len(player_pokemons) > 0 and len(opponent_pokemons) > 0:
-        player_pokemon = params.pokemon(player_pokemons, opponent_pokemons[0])
+        player_pokemon = params.pokemon_selection(player_pokemons, opponent_pokemons[0])
         pokemon_battle(player_pokemon, opponent_pokemons[0])
         if player_pokemon.faint:
             player_pokemons.remove(player_pokemon)
@@ -69,29 +54,6 @@ def team_battle(player_team: Team, opponent_team: Team):
     else:
         player_team.lost_battles += 1
         opponent_team.won_battles += 1
-
-
-def best_pokemon(team: list, foe: Pokemon):
-    best = team[0]
-    best_value = 4
-    for pokemon in team:
-        value = pokemon.damage_multi[Type[foe.type1]]
-        if foe.type2:
-            value += pokemon.damage_multi[Type[foe.type2]]
-            value /= 2
-        if best_value > value:
-            best = pokemon
-            best_value = value
-
-    return best
-
-
-def random_pokemon(team: list, *args):
-    return random.choices(team)[0]
-
-
-def first_pokemon(team: list, *args):
-    return team[0]
 
 
 def best_move(moves: list, pok: Pokemon):
