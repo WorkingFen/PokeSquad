@@ -4,6 +4,7 @@ import battle
 import parameters as params
 import multiprocessing
 import time
+from model import Team
 
 
 def evolve():
@@ -18,17 +19,14 @@ def evolve():
 def init_population(pokemons: list, size: int):
     population = []
     while len(population) < size:
-        population.append(frozenset(random.choices(pokemons, k=params.team_size)))
+        population.append(Team(random.choices(pokemons, k=params.team_size)))
     return population
 
 
 def mutate(offspring: list):
     mutants = []
     for team in offspring:
-        mutated_team = []
-        for pokemon in team:
-            mutated_team.append(pokemon.mutate())
-        mutants.append(frozenset(mutated_team))
+        mutants.append(team.mutate(params.all_pokemons))
     return mutants
 
 

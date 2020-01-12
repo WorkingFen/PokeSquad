@@ -1,6 +1,7 @@
 import random
 
 import parameters as params
+from model import Team
 
 
 def prepare_pairs(sorted_population: list):
@@ -18,9 +19,10 @@ def half_split(population: list):
     pairs, offspring = prepare_pairs(population)
     for dad, mom in pairs:
         if random.random() < 0.5:
-            offspring.append(frozenset(dad[:params.team_size / 2] + mom[params.team_size / 2:]))
+            child = frozenset(dad.pokemons[:params.team_size / 2] + mom.pokemons[params.team_size / 2:])
         else:
-            offspring.append(frozenset(dad[params.team_size / 2:] + mom[:params.team_size / 2]))
+            child = frozenset(dad.pokemons[params.team_size / 2:] + mom.pokemons[:params.team_size / 2])
+        offspring.append(Team(child))
     return offspring
 
 
@@ -28,10 +30,10 @@ def mixed(sorted_population: list):
     pairs, offspring = prepare_pairs(sorted_population)
     for dad, mom in pairs:
         child = set()
-        for dads, moms in zip(dad, mom):
+        for dads, moms in zip(dad.pokemons, mom.pokemons):
             if random.random() < 0.5:
                 child.add(dads)
             else:
                 child.add(moms)
-        offspring.append(frozenset(child))
+        offspring.append(Team(frozenset(child)))
     return offspring

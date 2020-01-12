@@ -1,13 +1,15 @@
 import ast
 
-import parameters as params
-from model import Pokemon
+from logger import logger
 from model import Move
+from model import Pokemon
 from model import Type
 
 
 def load_pokemons():
     pokemon_list = []
+    all_moves = load_moves()
+    logger.info('loading pokemons')
     lines = open('../data/pokemon.csv').readlines()
     for line in lines[1:]:
         attr = line.split(';')
@@ -20,16 +22,7 @@ def load_pokemons():
         type2 = attr[30].upper()
         moves_names = ast.literal_eval(attr[37])
         moves_names = [m.upper() for m in moves_names]
-        moves = [x for x in params.all_moves if x.name in moves_names]
-        """
-            hp = attr[3]
-            attack = attr[4]
-            defense = attr[5]
-            sp_attack = attr[6]
-            sp_defense = attr[7]
-            speed = attr[8]
-            occurrence = attr[36]
-        """
+        moves = [x for x in all_moves if x.name in moves_names]
         pokemon_list.append(
             Pokemon(variant, name, attr[3], attr[4], attr[5], attr[6], attr[7], attr[8],
                     damage, type1, type2, float(attr[36]), moves)
@@ -37,24 +30,19 @@ def load_pokemons():
     total_occurrence = sum([p.occurrence for p in pokemon_list])
     for p in pokemon_list:
         p.occurrence = p.occurrence / total_occurrence
+    logger.info('pokemons loaded')
     return pokemon_list
 
 
 def load_moves():
     move_list = []
+    logger.info('loading moves')
     lines = open('../data/move.csv').readlines()
     for line in lines[1:]:
         attr = line.split(';')
         name = attr[0].upper()
         type = attr[1].upper()
         category = attr[2].upper()
-        """
-            power = attr[3]
-            priority = attr[4]
-            contact = attr[5]
-            sound_type = attr[6]
-            punch_type = attr[7]
-        """
         move_list.append(Move(name, type, category, attr[3]))
+    logger.info('moves loaded')
     return move_list
-

@@ -1,29 +1,20 @@
-import statistics
-
-import parameters as params
-from model import Pokemon
+from logger import logger
 from model import Category
 from model import Move
+from model import Pokemon
+from model import Team
 from model import Type
 
 
 def tournament(teams: list):
-    scores = {}
     for player_team in teams:
         for opponent_team in teams:
             if player_team is opponent_team:
                 continue
-            winner = team_battle(player_team, opponent_team)
-            if player_team is winner:
-                scores[player_team] = scores.get(player_team, 0) + 1
-            else:
-                scores[opponent_team] = scores.get(opponent_team, 0) + 1
-    sorted_teams = sorted(scores.items(), key=lambda p: -params.reward(sum([x.attack + x.defense for x in p[0]])))
-    data = []
-    for team, score in sorted_teams:
-        data.append(sum([x.attack + x.defense for x in team]))
-    mean = statistics.mean(data)
-    print(f'size: {len(teams)} mean: {mean}, best: {sum([x.attack + x.defense for x in sorted_teams[0][0]])}')
+            team_battle(player_team, opponent_team)
+    sorted_teams = sorted(teams, key=lambda p: -p.score())
+    logger.info(f'size: {len(teams)}, best: {sorted_teams[0].score()}, won: {sorted_teams[0].won_battles}, '
+                f'lost: {sorted_teams[0].lost_battles}')
     return sorted_teams
 
 
@@ -34,16 +25,15 @@ def pokemon_battle(friend: Pokemon, foe: Pokemon):
     foe_move = best_move(foe.moves, friend)
     friend_damage = max(get_damage(friend_move, friend, foe), 0.01)
     foe_damage = max(get_damage(foe_move, foe, friend), 0.01)
-
-    if friend_hp/foe_damage >= foe_hp/friend_damage:
+    if friend_hp / foe_damage >= foe_hp / friend_damage:
         foe.faint = True
     else:
         friend.faint = True
 
 
-def team_battle(player_team: list, opponent_team: list):
-    player_pokemons = list(player_team.copy())
-    opponent_pokemons = list(opponent_team.copy())
+def team_battle(player_team: Team, opponent_team: Team):
+    player_pokemons = list(player_team.pokemons.copy())
+    opponent_pokemons = list(opponent_team.pokemons.copy())
     while len(player_pokemons) > 0 and len(opponent_pokemons) > 0:
         player_pokemon = best_pokemon(player_pokemons, opponent_pokemons[0])
         pokemon_battle(player_pokemon, opponent_pokemons[0])
@@ -51,17 +41,12 @@ def team_battle(player_team: list, opponent_team: list):
             player_pokemons.remove(player_pokemon)
         else:
             opponent_pokemons.remove(opponent_pokemons[0])
-    revive_team(player_team)
-    revive_team(opponent_team)
     if len(player_pokemons) > 0:
-        return player_team
+        player_team.won_battles += 1
+        opponent_team.lost_battles += 1
     else:
-        return opponent_team
-
-
-def revive_team(team: list):
-    for x in team:
-        x.faint = False
+        player_team.lost_battles += 1
+        opponent_team.won_battles += 1
 
 
 def best_pokemon(team: list, foe: Pokemon):
