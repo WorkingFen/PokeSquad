@@ -30,9 +30,9 @@ def pokemon_battle(friend: model.Pokemon, foe: model.Pokemon):
     friend_damage = max(get_damage(friend_move, friend, foe), 0.01)
     foe_damage = max(get_damage(foe_move, foe, friend), 0.01)
     if friend_hp / foe_damage >= foe_hp / friend_damage:
-        foe.faint = True
+        return friend
     else:
-        friend.faint = True
+        return foe
 
 
 def team_battle(player_team: model.Team, opponent_team: model.Team):
@@ -41,15 +41,11 @@ def team_battle(player_team: model.Team, opponent_team: model.Team):
     opponent_pokemons = list(opponent_team.pokemons.copy())
     while len(player_pokemons) > 0 and len(opponent_pokemons) > 0:
         player_pokemon = pokemon_selection(player_pokemons, opponent_pokemons[0])
-        pokemon_battle(player_pokemon, opponent_pokemons[0])
-        if player_pokemon.faint:
-            player_pokemons.remove(player_pokemon)
+        winner = pokemon_battle(player_pokemon, opponent_pokemons[0])
+        if winner is player_pokemon:
+            player_pokemons.remove(opponent_pokemons[0])
         else:
-            opponent_pokemons.remove(opponent_pokemons[0])
-    for x in player_team.pokemons:
-        x.faint = False
-    for x in opponent_team.pokemons:
-        x.faint = False
+            opponent_pokemons.remove(player_pokemon)
     if len(player_pokemons) > 0:
         player_team.won_battles += 1
         opponent_team.lost_battles += 1
