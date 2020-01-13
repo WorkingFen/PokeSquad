@@ -1,3 +1,4 @@
+import copy
 import random
 
 import model
@@ -20,22 +21,22 @@ def half_split(population: list):
     pairs, offspring = prepare_pairs(population)
     for dad, mom in pairs:
         if random.random() < 0.5:
-            child = set(list(dad.pokemons)[:int(team_size / 2)])
-            for moms in reversed(list(mom.pokemons)):
+            child = dad.pokemons[:int(team_size / 2)]
+            for moms in reversed(mom.pokemons):
                 if len(child) < team_size:
                     child.add(moms)
                 else:
                     break
         else:
-            child = set(list(mom.pokemons)[:int(team_size / 2)])
-            for dads in reversed(list(dad.pokemons)):
+            child = mom.pokemons[:int(team_size / 2)]
+            for dads in reversed(dad.pokemons):
                 if len(child) < team_size:
                     child.add(dads)
                 else:
                     break
         won = int((dad.won_battles + mom.won_battles) / 2)
         lost = int((dad.lost_battles + mom.lost_battles) / 2)
-        offspring.append(model.Team(frozenset(child), won, lost))
+        offspring.append(model.Team(child, won, lost))
     return offspring
 
 
@@ -43,18 +44,18 @@ def mixed(sorted_population: list):
     from parameters import team_size
     pairs, offspring = prepare_pairs(sorted_population)
     for dad, mom in pairs:
-        child = set()
+        child = []
         for dads in dad.pokemons:
             if random.random() < 0.5:
-                child.add(dads)
-        moms_sh = list(mom.pokemons)
+                child.append(dads)
+        moms_sh = copy.copy(mom.pokemons)
         random.shuffle(moms_sh)
         for moms in moms_sh:
             if len(child) < team_size:
-                child.add(moms)
+                child.append(moms)
             else:
                 break
         won = int((dad.won_battles + mom.won_battles) / 2)
         lost = int((dad.lost_battles + mom.lost_battles) / 2)
-        offspring.append(model.Team(frozenset(child), won, lost))
+        offspring.append(model.Team(child, won, lost))
     return offspring
