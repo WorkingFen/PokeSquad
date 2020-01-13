@@ -35,7 +35,7 @@ def mutate(offspring: list):
     return mutants
 
 
-test_selection = [selection.ranked]
+test_selection = [selection.roulette]
 test_population = [params.small_population, params.big_population]
 test_elite = [params.small_elite, params.big_elite]
 test_ranked = [params.small_ranked_limit, params.big_ranked_limit]
