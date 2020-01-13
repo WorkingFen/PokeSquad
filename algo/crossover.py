@@ -24,14 +24,14 @@ def half_split(population: list):
             child = dad.pokemons[:int(team_size / 2)]
             for moms in reversed(mom.pokemons):
                 if len(child) < team_size:
-                    child.add(moms)
+                    child.append(moms)
                 else:
                     break
         else:
             child = mom.pokemons[:int(team_size / 2)]
             for dads in reversed(dad.pokemons):
                 if len(child) < team_size:
-                    child.add(dads)
+                    child.append(dads)
                 else:
                     break
         won = int((dad.won_battles + mom.won_battles) / 2)
