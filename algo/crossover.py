@@ -35,7 +35,7 @@ def half_split(population: list):
                     break
         won = int((dad.won_battles + mom.won_battles) / 2)
         lost = int((dad.lost_battles + mom.lost_battles) / 2)
-        offspring.append(model.Team(frozenset(child), won, lost))
+        offspring.append(model.Team(list(child), won, lost))
     return offspring
 
 
@@ -56,5 +56,5 @@ def mixed(sorted_population: list):
                 break
         won = int((dad.won_battles + mom.won_battles) / 2)
         lost = int((dad.lost_battles + mom.lost_battles) / 2)
-        offspring.append(model.Team(frozenset(child), won, lost))
+        offspring.append(model.Team(list(child), won, lost))
     return offspring

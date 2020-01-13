@@ -46,6 +46,10 @@ def team_battle(player_team: model.Team, opponent_team: model.Team):
             player_pokemons.remove(player_pokemon)
         else:
             opponent_pokemons.remove(opponent_pokemons[0])
+    for x in player_team.pokemons:
+        x.faint = False
+    for x in opponent_team.pokemons:
+        x.faint = False
     if len(player_pokemons) > 0:
         player_team.won_battles += 1
         opponent_team.lost_battles += 1
