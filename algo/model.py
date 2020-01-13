@@ -32,7 +32,7 @@ class Pokemon(object):
                f'moves: {self.moves}'
 
     def mutate(self, all_pokemons, prob):
-        mutant = copy.copy(self)
+        mutant = copy.deepcopy(self)
         mutations = choices([0, 1, 2, 3, 4, 5], prob)[0]
         if mutations == 5:
             return choices(all_pokemons, [p.occurrence for p in all_pokemons], k=1)[0]
@@ -90,7 +90,7 @@ class Team(object):
 
     def __init__(self, pokemons: list, won=0, lost=0):
         assert len(pokemons) == 6
-        self.pokemons = pokemons
+        self.pokemons = copy.deepcopy(pokemons)
         self.won_battles = won
         self.lost_battles = lost
 
@@ -107,4 +107,5 @@ class Team(object):
         mutants = []
         for pokemon in self.pokemons:
             mutants.append(pokemon.mutate(all_pokemons, prob))
+        assert len(mutants) == 6
         return Team(mutants, self.won_battles, self.lost_battles)
