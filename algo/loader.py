@@ -23,7 +23,7 @@ def load_pokemons():
         moves = [x for x in all_moves if x.name in moves_names]
         pokemon_list.append(
             model.Pokemon(variant, name, attr[3], attr[4], attr[5], attr[6], attr[7], attr[8],
-                    damage, type1, type2, float(attr[36]), moves)
+                          damage, type1, type2, float(attr[36]), moves)
         )
     total_occurrence = sum([p.occurrence for p in pokemon_list])
     for p in pokemon_list:
