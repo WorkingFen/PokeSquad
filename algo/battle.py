@@ -1,3 +1,4 @@
+import copy
 import random
 import statistics as stat
 
@@ -22,7 +23,7 @@ def tournament(teams: list):
     return sorted_teams
 
 
-def pokemon_battle(friend: model.Pokemon, foe: model.Pokemon):
+def better_pokemon(friend: model.Pokemon, foe: model.Pokemon):
     friend_hp = (3 * friend.hp) + 15
     foe_hp = (3 * foe.hp) + 15
     friend_move = best_move(friend.moves, foe)
@@ -30,26 +31,22 @@ def pokemon_battle(friend: model.Pokemon, foe: model.Pokemon):
     friend_damage = max(get_damage(friend_move, friend, foe), 0.01)
     foe_damage = max(get_damage(foe_move, foe, friend), 0.01)
     if friend_hp / foe_damage >= foe_hp / friend_damage:
-        foe.faint = True
+        return friend
     else:
-        friend.faint = True
+        return foe
 
 
 def team_battle(player_team: model.Team, opponent_team: model.Team):
     from parameters import pokemon_selection
-    player_pokemons = list(player_team.pokemons.copy())
-    opponent_pokemons = list(opponent_team.pokemons.copy())
+    player_pokemons = copy.copy(player_team.pokemons)
+    opponent_pokemons = copy.copy(opponent_team.pokemons)
     while len(player_pokemons) > 0 and len(opponent_pokemons) > 0:
         player_pokemon = pokemon_selection(player_pokemons, opponent_pokemons[0])
-        pokemon_battle(player_pokemon, opponent_pokemons[0])
-        if player_pokemon.faint:
+        winner = better_pokemon(player_pokemon, opponent_pokemons[0])
+        if player_pokemon is not winner:
             player_pokemons.remove(player_pokemon)
         else:
             opponent_pokemons.remove(opponent_pokemons[0])
-    for x in player_team.pokemons:
-        x.faint = False
-    for x in opponent_team.pokemons:
-        x.faint = False
     if len(player_pokemons) > 0:
         player_team.won_battles += 1
         opponent_team.lost_battles += 1

@@ -24,7 +24,6 @@ class Pokemon(object):
         self.type2 = type2
         self.occurrence = occurrence
         self.moves = sample(moves, k=min(len(moves), Pokemon.max_moves_count))
-        self.faint = False
 
     def __repr__(self):
         return f'variant: {self.variant}, ' \
