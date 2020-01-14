@@ -1,4 +1,3 @@
-import datetime
 import os
 import statistics as stat
 from collections import defaultdict
@@ -14,7 +13,8 @@ import selection
 
 if not os.path.exists('../data/plots'):
     os.mkdir('../data/plots')
-
+if not os.path.exists('../data/results'):
+    os.mkdir('../data/results')
 
 test_selection = [selection.roulette, selection.ranked]
 test_population = [params.small_population, params.big_population]
@@ -30,8 +30,9 @@ test_tournaments = [
 test_cross = [crossover.mixed, crossover.half_split]
 test_succ = [replacement.elite, replacement.generative]
 
-
+test_results = {}
 for selection in test_selection:
+    test_name = f'test_selection_{selection.__name__}'
     total_results = defaultdict(list)
     for i in range(10):
         params.selection = selection
@@ -46,10 +47,15 @@ for selection in test_selection:
         params.succession = replacement.elite
         results = main.evolve()
         for j in range(len(results)):
-            total_results[i].append(results[j])
+            total_results[j].append(results[j])
     mean_scores = [stat.mean(v) for k, v in total_results.items()]
-    plt.plot(mean_scores)
-    plt.gca().set_position((.1, .3, .8, .6))
-    plt.ylabel('mean score')
-    plt.xlabel('generation')
-    plt.savefig(f'../data/plots/plot_{datetime.datetime.now()}.png')
+    test_results[selection.__name__] = mean_scores
+    with open(f'../data/results/{test_name}.csv', 'w') as f:
+        for score in mean_scores:
+            f.write(f'{score}\n')
+for tested_obj, values in test_results.items():
+    plt.plot(values, label=tested_obj)
+plt.ylabel('mean score')
+plt.xlabel('generation')
+plt.legend()
+plt.savefig(f'../data/plots/plot_selection.png')
