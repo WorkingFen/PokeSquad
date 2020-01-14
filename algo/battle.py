@@ -1,25 +1,13 @@
 import copy
 import random
-import statistics as stat
 
 import model
-from logger import logger
 
 
 def tournament(teams: list):
     from parameters import tournament_type
     tournament_type(teams, team_battle)
     sorted_teams = sorted(teams, key=lambda p: -p.score())
-    scores = [x.score() for x in teams]
-    logger.info(
-        f'size: {len(teams)}, '
-        f'mean: {stat.mean(scores)}, '
-        f'stddev: {stat.stdev(scores)}, '
-        f'best: {sorted_teams[0].score()}, '
-        f'won: {sorted_teams[0].won_battles}, '
-        f'lost: {sorted_teams[0].lost_battles}, '
-        f'diff: {sorted_teams[0].won_battles - sorted_teams[0].lost_battles}'
-    )
     return sorted_teams
 
 
