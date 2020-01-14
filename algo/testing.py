@@ -35,7 +35,7 @@ for selection in test_selection:
     total_results = defaultdict(list)
     for i in range(10):
         params.selection = selection
-        params.population_size = 100
+        params.population_size = 50
         params.elite_limit = 15
         params.ranked_limit = 20
         params.crossover_probability = 0.5

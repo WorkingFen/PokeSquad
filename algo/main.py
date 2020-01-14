@@ -22,7 +22,7 @@ def evolve():
                 f'crossover: {params.crossover.__name__}, '
                 f'succession: {params.succession.__name__}')
     population = init_population(params.all_pokemons, params.population_size)
-    while generation < 100:
+    while generation < 150:
         sorted_population = battle.tournament(population)
         scores = [x.score() for x in sorted_population]
         mean = stat.mean(scores)
