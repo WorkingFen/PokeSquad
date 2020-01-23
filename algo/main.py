@@ -22,7 +22,7 @@ def evolve():
                 f'crossover: {params.crossover.__name__}, '
                 f'succession: {params.succession.__name__}')
     population = init_population(params.all_pokemons, params.population_size)
-    while generation < 150:
+    while generation < 250:
         sorted_population = battle.tournament(population)
         scores = [x.score() for x in sorted_population]
         mean = stat.mean(scores)
@@ -48,7 +48,7 @@ def evolve():
 def init_population(pokemons: list, size: int):
     population = []
     while len(population) < size:
-        population.append(model.Team(random.choices(pokemons, k=params.team_size)))
+        population.append(model.Team(random.choices(pokemons, [p.occurrence for p in pokemons], k=params.team_size)))
     return population
 
 

@@ -31,31 +31,55 @@ test_cross = [crossover.mixed, crossover.half_split]
 test_succ = [replacement.elite, replacement.generative]
 
 test_results = {}
-for p_cross in test_cross_prob:
-    test_name = f'test_crossover_prob_{p_cross}'
-    total_results = defaultdict(list)
-    for i in range(10):
-        params.selection = selection.ranked
-        params.population_size = 50
-        params.elite_limit = 15
-        params.ranked_limit = 20
-        params.crossover_probability = 0.5
-        params.mutation_dist = params.norm_dist
-        params.tournament_type = battle.all_v_all
-        params.pokemon_selection = battle.first_pokemon
-        params.crossover = crossover.half_split
-        params.succession = replacement.elite
-        results = main.evolve()
-        for j in range(len(results)):
-            total_results[j].append(results[j])
-    mean_scores = [stat.mean(v) for k, v in total_results.items()]
-    test_results[f'cross prob {p_cross}'] = mean_scores
-    with open(f'../data/results/{test_name}.csv', 'w') as f:
-        for score in mean_scores:
-            f.write(f'{score}\n')
+for sel in test_selection:
+    if sel is selection.ranked:
+        for rank in test_ranked:
+            test_name = f'test_main_{sel.__name__}_{rank}'
+            total_results = defaultdict(list)
+            for i in range(10):
+                params.selection = selection.ranked
+                params.population_size = 200
+                params.elite_limit = 5
+                params.ranked_limit = rank
+                params.crossover_probability = 0.5
+                params.mutation_dist = params.local_dist
+                params.tournament_type = battle.all_v_all
+                params.pokemon_selection = battle.first_pokemon
+                params.crossover = crossover.half_split
+                params.succession = replacement.elite
+                results = main.evolve()
+                for j in range(len(results)):
+                    total_results[j].append(results[j])
+            mean_scores = [stat.mean(v) for k, v in total_results.items()]
+            test_results[f'{sel.__name__} {rank}'] = mean_scores
+            with open(f'../data/results/{test_name}.csv', 'w') as f:
+                for score in mean_scores:
+                    f.write(f'{score}\n')
+    else:
+        test_name = f'test_main_{sel.__name__}'
+        total_results = defaultdict(list)
+        for i in range(10):
+            params.selection = sel
+            params.population_size = 200
+            params.elite_limit = 5
+            params.ranked_limit = 20
+            params.crossover_probability = 0.5
+            params.mutation_dist = params.local_dist
+            params.tournament_type = battle.all_v_all
+            params.pokemon_selection = battle.first_pokemon
+            params.crossover = crossover.half_split
+            params.succession = replacement.elite
+            results = main.evolve()
+            for j in range(len(results)):
+                total_results[j].append(results[j])
+        mean_scores = [stat.mean(v) for k, v in total_results.items()]
+        test_results[f'{sel.__name__}'] = mean_scores
+        with open(f'../data/results/{test_name}.csv', 'w') as f:
+            for score in mean_scores:
+                f.write(f'{score}\n')
 for tested_obj, values in test_results.items():
     plt.plot(values, label=str(tested_obj))
 plt.ylabel('mean score')
 plt.xlabel('generation')
 plt.legend()
-plt.savefig(f'../data/plots/plot_crossover_prob.png')
+plt.savefig(f'../data/plots/plot_main_test.png')

@@ -1,6 +1,6 @@
 import copy
 import random
-
+import math
 import model
 
 
@@ -18,7 +18,12 @@ def better_pokemon(friend: model.Pokemon, foe: model.Pokemon):
     foe_move = best_move(foe.moves, friend)
     friend_damage = max(get_damage(friend_move, friend, foe), 0.01)
     foe_damage = max(get_damage(foe_move, foe, friend), 0.01)
-    if friend_hp / foe_damage >= foe_hp / friend_damage:
+    if math.ceil(friend_hp / foe_damage) == math.ceil(foe_hp / friend_damage):
+        if friend.speed >= foe.speed:
+            return friend
+        else:
+            return foe
+    elif (friend_hp/foe_damage) >= (foe_hp/friend_damage):
         return friend
     else:
         return foe
